@@ -1,0 +1,44 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    height: 732px;
+}
+
+.allHomepage {
+    background-image: url('https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+.title {
+    color: rgb(212, 218, 247);
+    text-align: center;
+    font-family: 'Ink Free', Courier, monospace;
+    font-size: 120px;
+    font-weight: 600;
+    padding: 72px 0 0 0;
+    letter-spacing: 6px;
+}
+
+.subtitle {
+    color: rgb(212, 218, 247);
+    font-family: 'Ink Free', Courier, monospace;
+    font-size: 48px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 24px 640px;
+    
+    .subtitleText {
+        text-align: center;
+    }
+
+    i {
+        font-size: 32px;
+        padding: 0 0 0 48px;
+    }
+}
+
+.posts {
+    font-size: 24px;
+    padding: 24px 0 48px 0;
+}

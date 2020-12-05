@@ -1,0 +1,28 @@
+@import "../../../styles/settings.scss";
+
+.main {
+  background-image: linear-gradient(to right, rgb(62, 1, 87), rgb(33, 0, 46),  rgb(16, 0, 22), rgb(33, 0, 46),  rgb(62, 1, 87));
+  padding: 32px 0;
+}
+
+.allLinks {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 48px 0 0;
+  font-size: 32px;
+}
+
+.links {
+  color: white;
+  padding: 0 24px;
+  font-family: 'Ink Free', Courier, monospace;
+}
+
+.line {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 95%;
+  margin: 0 10px;
+  background-image: linear-gradient(to right, black, white, black);
+}
