@@ -7,18 +7,9 @@ import styles from "./Homepage.module.scss";
 const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.allHomepage}>
-      <ul className={styles.circles}>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <div className={styles.background}>
+        
+      </div>
       <div className={styles.title}>YOU ROCK! </div>
       <div className={styles.subtitle}>
         Minerals shop<i class="fa fa-angle-double-down" aria-hidden="true"></i>

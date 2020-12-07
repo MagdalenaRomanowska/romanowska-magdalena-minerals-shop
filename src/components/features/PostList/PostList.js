@@ -5,27 +5,51 @@ import { Link } from "react-router-dom";
 
 const PostList = ({ posts }) => (
   <div className={styles.productDescription}>
-    {posts.length ? (
-      posts.map((post) => (
-        <Link key={post.id} to={`/post/${post.id}`} className={styles.product}>
-          <div className={styles.mineralText}>
-            <div className={styles.mineralName}>
-              Mineral name:{post.title}
-              <br />
+    <div className={styles.squares}>
+      <ul className={styles.circles}>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div className={styles.allProducts}>
+      {posts.length ? (
+        posts.map((post) => (
+          <Link
+            key={post.id}
+            to={`/post/${post.id}`}
+            className={styles.product}
+          >
+            <div className={styles.mineralText}>
+              <div className={styles.mineralName}>
+                <div className={styles.mineralNameTitle}>Mineral name:</div>
+                <div className={styles.mineralNameContent}>{post.title}</div>
+                <br />
+              </div>
+              <div className={styles.mineralPrice}>
+                <div className={styles.mineralPriceTitle}>Minimal price:</div>
+                <div className={styles.mineralPriceContent}>{post.price}</div>
+                <br />
+              </div>
             </div>
-            <div className={styles.mineralPrice}>
-              Minimal price:{post.price}
-              <br />
+            <div>
+              <img src={post.photo} alt={"mineralPhoto"} />{" "}
             </div>
-          </div>
-          <div>
-            <img src={post.photo} alt={"mineralPhoto"} />{" "}
-          </div>
-        </Link>
-      ))
-    ) : (
-      <p>Sorry, no results found.</p>
-    )}
+            <div className={styles.line}></div>
+          </Link>
+        ))
+      ) : (
+        <p>Sorry, no results found.</p>
+      )}
+    </div>
+    
   </div>
 );
 
