@@ -7,7 +7,7 @@ export const initialState = {
       updated: new Date('2019-01-01T12:00:00Z'),
       title: 'Mineral 1',
       price: '345 $',
-      photo: '/images/green.jpg',
+      photo: '/images/mineral-1-photo-1.jpg',
     },
     {
       id: 2,
@@ -15,7 +15,7 @@ export const initialState = {
       updated: new Date('2019-01-06T12:00:00Z'),
       title: 'Mineral 2',
       price: '345 $',
-      photo: '/images/blue.jpg',
+      photo: '/images/mineral-2-photo-1.jpg',
     },
     {
       id: 3,
@@ -23,7 +23,7 @@ export const initialState = {
       updated: new Date('2019-01-02T12:00:00Z'),
       title: 'Mineral 3',
       price: '345 $',
-      photo: '/images/violet.jpg',
+      photo: '/images/mineral-3-photo-1.jpg',
     },
     {
       id: 4,
@@ -31,7 +31,7 @@ export const initialState = {
       updated: new Date('2019-01-03T12:00:00Z'),
       title: 'Mineral 4',
       price: '345 $',
-      photo: '/images/grey.jpg',
+      photo: '/images/mineral-4-photo-1.jpg',
     },
     {
       id: 5,
@@ -39,7 +39,7 @@ export const initialState = {
       updated: new Date('2019-01-04T12:00:00Z'),
       title: 'Mineral 5',
       price: '345 $',
-      photo: '/images/orange.jpg',
+      photo: '/images/mineral-5-photo-1.jpg',
     },
     {
       id: 6,
@@ -47,7 +47,7 @@ export const initialState = {
       updated: new Date('2019-01-05T16:35:17Z'),
       title: 'Mineral 6',
       price: '345 $',
-      photo: '/images/brown.jpg',
+      photo: '/images/mineral-6-photo-1.jpg',
     },
   ],
 };

@@ -1,8 +1,22 @@
 @import "../../../styles/settings.scss";
 
 .main {
-  background-image: linear-gradient(to right, rgb(62, 1, 87), rgb(33, 0, 46),  rgb(16, 0, 22), rgb(33, 0, 46),  rgb(62, 1, 87));
+  background: linear-gradient(-45deg,  #170d9c, #000000, #000000, #170d9c);
+	background-size: 400% 400%;
+	animation: gradient 8s ease infinite;
   padding: 32px 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .allLinks {
@@ -15,7 +29,7 @@
 .links {
   color: white;
   padding: 0 24px;
-  font-family: 'Ink Free', Courier, monospace;
+  font-family: $font-text;
 }
 
 .line {

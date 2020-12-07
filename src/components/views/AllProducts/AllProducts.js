@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MyPosts.module.scss';
+import styles from './AllProducts.module.scss';
 import PostList from '../../features/PostList/PostListContainer';
 
 const MyPosts = () => (
