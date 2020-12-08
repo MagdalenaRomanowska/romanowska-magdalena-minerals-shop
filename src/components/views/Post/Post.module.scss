@@ -1,22 +1,8 @@
 @import "../../../styles/settings.scss";
 
 .main {
-  background: rgb(183, 196, 255);
-  padding: 24px 0 24px 48px;
+  font-family: $font-text;
   font-size: 24px;
-  color: rgb(82, 11, 214);
-}
-
-.login {
-  background: rgb(57, 235, 241);
-  color: white;
-  font-size: 24px;
-  padding: 12px;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: fit-content;
-  display: inline-flex;
-  margin: 24px 0;
 }
 
 .postDetail {
@@ -26,5 +12,163 @@
 }
 
 .detail {
-    display: inline-flex;
+  display: inline-flex;
+}
+
+.detailTitle {
+  font-size: 72px;
+  color: $color-important;
+  text-align: center;
+  padding: 120px 0 84px 0;
+}
+
+.detailText {
+  font-size: 26px;
+  color: $color-navyblue;
+  text-align: center;
+  padding: 0 0 96px 0;
+}
+
+.photoDescription {
+  font-size: 48px;
+  color: $color-navyblue;
+  text-align: center;
+  padding: 0 0 72px 0;
+  letter-spacing: 6px;
+}
+
+.photoDescription2 {
+  font-size: 48px;
+  color: $color-navyblue;
+  text-align: center;
+  padding: 120px 0 72px 0;
+  letter-spacing: 6px;
+}
+
+.detailPhoto {
+  display: inline-flex;
+  width: 300px;
+  margin-left: 180px;
+  img {
+    margin: 0 80px;
+  }
+}
+
+.postDetailPrice {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.background {
+  background: $color-lightblue;
+  width: 100%;
+  height: 190vh;
+}
+
+.squares{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 192%;
+  overflow: hidden;
+}
+
+.squares li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: $color-navyblue;
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.squares li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.squares li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.squares li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.squares li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.squares li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.squares li:nth-child(6){
+  left: 75%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 3s;
+}
+
+.squares li:nth-child(7){
+  left: 35%;
+  width: 70px;
+  height: 70px;
+  animation-delay: 7s;
+}
+
+.squares li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.squares li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.squares li:nth-child(10){
+  left: 85%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.5;
+  }
+
+  100%{
+      transform: translateY(-1600px) rotate(720deg);
+      opacity: 0;
+  }
 }

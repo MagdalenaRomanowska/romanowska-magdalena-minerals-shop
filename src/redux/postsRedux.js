@@ -16,8 +16,8 @@ export const getPosts = ({ posts }) => {
   return posts; 
 };
 
-export const getPost = ({ posts }, postId) => {
-  const filtered = posts.filter((post) => post.id == postId);
+export const getPost = ({ posts }, postTitle) => {
+  const filtered = posts.filter((post) => post.title == postTitle);
   return filtered.length ? filtered[0] : { error: true };
 };
 

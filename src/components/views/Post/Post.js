@@ -1,43 +1,45 @@
-import React from 'react';
-import PropTypes from 'prop-types';   
-import styles from './Post.module.scss';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Post.module.scss";
 
-const Post = ({post, userState}) => (
+const Post = ({ post }) => (
   <div className={styles.main}>
-    <div>
-      {userState === 'loggedUser' && (
-        <div>
-          <div className={styles.login}>
-            <Link to={`/post/${post.id}/edit`}>Edit this post</Link>
-          </div>
+    <div className={styles.background}>
+      <ul className={styles.squares}>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div className={styles.postContent}>
+        <div className={styles.detailTitle}>{post ? post.title : ""}</div>
+        <div className={styles.detailText}>{post ? post.text : ""}</div>
+        <div className={styles.photoDescription}>{post ? post.photoDescription : ""}</div>
+        <div className={styles.detailPhoto}>
+          <img src={post ? post.photo : ""} alt={"mineralPhoto"} />
+          <img src={post ? post.photo2 : ""} alt={"mineralPhoto2"} />
+          <img src={post ? post.photo3 : ""} alt={"mineralPhoto3"} />
         </div>
-      )}
-      {userState === 'admin' && (
-        <div>
-          <div className={styles.login}>
-            <Link to={`/post/${post.id}/edit`}>Edit this post</Link>
-          </div>
+        <div className={styles.photoDescription2}>{post ? post.photoDescription2 : ""}</div>
+        <div className={styles.detailPhoto}>
+          <img src={post ? post.photoBracelet : ""} alt={"mineralPhoto"} />
+          <img src={post ? post.photoEarings : ""} alt={"mineralPhoto2"} />
+          <img src={post ? post.photoRing : ""} alt={"mineralPhoto3"} />
         </div>
-      )}
+        <div className={styles.postDetailPrice}>Price: {post ? post.price : ""}</div>
+      </div>
     </div>
-    <div className={styles.postDetail}>Post id: </div><div className={styles.detail}>{post ? post.id : ''}</div><br/>
-    <div className={styles.postDetail}>Author email: </div><div className={styles.detail}>{post ? post.author : ''}</div><br/>
-    <div className={styles.postDetail}>Created: </div><div className={styles.detail}>{post ? post.created.toString() : ''}</div><br/>
-    <div className={styles.postDetail}>Updated: </div><div className={styles.detail}>{post ? post.updated.toString() : ''}</div><br/>
-    <div className={styles.postDetail}>Status: </div><div className={styles.detail}>{post ? post.status : ''}</div><br/>
-    <div className={styles.postDetail}>Title: </div><div className={styles.detail}>{post ? post.title : ''}</div><br/>
-    <div className={styles.postDetail}>Text: </div><div className={styles.detail}>{post ? post.text : ''}</div><br/>
-    <div className={styles.postDetail}>Photo: </div><div className={styles.detail}>{post ? post.photo : ''}</div><br/>
-    <div className={styles.postDetail}>Price: </div><div className={styles.detail}>{post ? post.price : ''}</div><br/>
-    <div className={styles.postDetail}>Phone: </div><div className={styles.detail}>{post ? post.phone : ''}</div><br/>
-    <div className={styles.postDetail}>Location: </div><div className={styles.detail}>{post ? post.location : ''}</div><br/>
   </div>
 );
 
 Post.propTypes = {
   post: PropTypes.any,
-  userState: PropTypes.any,
 };
 
 export default Post;

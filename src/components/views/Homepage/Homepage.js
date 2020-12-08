@@ -8,11 +8,10 @@ const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.allHomepage}>
       <div className={styles.background}>
-        
       </div>
       <div className={styles.title}>YOU ROCK! </div>
       <div className={styles.subtitle}>
-        Minerals shop<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        Minerals jewelry shop<i class="fa fa-angle-double-down" aria-hidden="true"></i>
       </div>
     </div>
     <div className={styles.posts}>
@@ -29,6 +28,5 @@ Component.propTypes = {
 
 export {
   Component as Homepage,
-  // Container as Homepage,
   Component as HomepageComponent,
 };

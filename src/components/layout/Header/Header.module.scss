@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .main {
-  background: linear-gradient(-45deg,  #170d9c, #030027, #030027, #170d9c);
+  background: linear-gradient(-45deg, $color-blue, $color-darkblue, $color-darkblue, $color-blue);
 	background-size: 400% 400%;
 	animation: gradient 8s ease infinite;
   padding: 32px 0;
@@ -27,7 +27,7 @@
 }
 
 .links {
-  color: white;
+  color: $color-light;
   padding: 0 24px;
   font-family: $font-text;
 }
@@ -36,7 +36,6 @@
   position: absolute;
   content: "";
   height: 1px;
-  width: 95%;
-  margin: 0 10px;
-  background-image: linear-gradient(to right, black, white, black);
+  width: 100%;
+  background-image: linear-gradient(to right, $color-dark, $color-light, $color-dark);
 }
