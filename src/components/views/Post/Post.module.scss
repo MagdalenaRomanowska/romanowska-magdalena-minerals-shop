@@ -26,7 +26,7 @@
   font-size: 26px;
   color: $color-navyblue;
   text-align: center;
-  padding: 0 0 96px 0;
+  padding: 0 48px 96px 72px;
 }
 
 .photoDescription {
@@ -47,10 +47,13 @@
 
 .detailPhoto {
   display: inline-flex;
-  width: 300px;
   margin-left: 180px;
   img {
     margin: 0 80px;
+    width: 300px;
+    &:hover img{
+      box-shadow: 0 0px 30px $color-blue;
+    }
   }
 }
 
@@ -63,6 +66,11 @@
   background: $color-lightblue;
   width: 100%;
   height: 190vh;
+}
+
+.postContent {
+  position: relative;
+  z-index: 1;
 }
 
 .squares{

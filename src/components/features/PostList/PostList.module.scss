@@ -7,13 +7,22 @@
 img {
   width: 500px;
   height: 500px;
-  margin: 90px 60px 60px 360px;
   border: solid 1px $color-dark;
   padding: 1px;
   max-width: 100%;
   height: auto;
+  box-shadow: 0 0px 6px $color-blue;
+  transition: transform .2s;
   &:hover {
-    box-shadow: 0 0 0.8em $color-light;
+    transform: scale(1.2); 
+  }
+}
+
+.photoInside {
+  margin: 90px 60px 60px 360px;
+  transition: box-shadow 0.4s ease-in-out;
+  &:hover img {
+    box-shadow: 0 0px 30px $color-blue; 
   }
 }
 
@@ -23,9 +32,9 @@ img {
 
 .product {
   color: $color-darkblue;
-  margin-left: 520px;
+  margin-left: 560px;
   margin-top: 36px;
-  font-size: 24px;
+  font-size: 32px;
   display: inline-flex;
   font-family: $font-text;
   &:hover {
@@ -69,7 +78,6 @@ img {
   animation: animate 25s linear infinite;
   animation-delay: 0s;
   bottom: 10px;
-  background-color: $color-darkblue;
 }
 
 .squares li:nth-child(1) {
@@ -77,6 +85,7 @@ img {
   width: 30px;
   height: 30px;
   animation-duration: 15s;
+  background-color: $color-important;
 }
 
 .squares li:nth-child(2) {
@@ -84,6 +93,7 @@ img {
   width: 20px;
   height: 20px;
   animation-duration: 19s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(3) {
@@ -91,6 +101,7 @@ img {
   width: 16px;
   height: 16px;
   animation-duration: 23s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(4) {
@@ -98,6 +109,7 @@ img {
   width: 32px;
   height: 32px;
   animation-duration: 27s;
+  background-color: $color-important;
 }
 
 .squares li:nth-child(5) {
@@ -105,6 +117,7 @@ img {
   width: 22px;
   height: 22px;
   animation-duration: 31s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(6) {
@@ -112,6 +125,7 @@ img {
   width: 14px;
   height: 14px;
   animation-duration: 17s;
+  background-color: $color-importantDark;
 }
 
 .squares li:nth-child(7) {
@@ -119,6 +133,7 @@ img {
   width: 26px;
   height: 26px;
   animation-duration: 21s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(8) {
@@ -126,6 +141,7 @@ img {
   width: 24px;
   height: 24px;
   animation-duration: 25s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(9) {
@@ -133,6 +149,7 @@ img {
   width: 15px;
   height: 15px;
   animation-duration: 26s;
+  background-color: $color-importantDark;
 }
 
 .squares li:nth-child(10) {
@@ -140,6 +157,7 @@ img {
   width: 20px;
   height: 20px;
   animation-duration: 16s;
+  background-color: $color-blue;
 }
 
 .squares li:nth-child(11) {
@@ -147,6 +165,7 @@ img {
   width: 20px;
   height: 20px;
   animation-duration: 18s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(12) {
@@ -154,6 +173,7 @@ img {
   width: 26px;
   height: 26px;
   animation-duration: 22s;
+  background-color: $color-blue;
 }
 
 .squares li:nth-child(13) {
@@ -161,6 +181,7 @@ img {
   width: 26px;
   height: 26px;
   animation-duration: 26s;
+  background-color: $color-important;
 }
 
 .squares li:nth-child(14) {
@@ -168,6 +189,7 @@ img {
   width: 16px;
   height: 16px;
   animation-duration: 24s;
+  background-color: $color-navyblue;
 }
 
 .squares li:nth-child(15) {
@@ -175,6 +197,7 @@ img {
   width: 12px;
   height: 12px;
   animation-duration: 20s;
+  background-color: $color-blue;
 }
 
 .squares li:nth-child(16) {
@@ -182,6 +205,7 @@ img {
   width: 10px;
   height: 10px;
   animation-duration: 14s;
+  background-color: $color-importantDark;
 }
 
 @keyframes animate {
@@ -192,7 +216,7 @@ img {
   }
 
   100% {
-    transform: translateY(-3352px) rotate(720deg);
+    transform: translateY(-3380px) rotate(720deg);
     opacity: 0.9;
     border-radius: 0;
   }

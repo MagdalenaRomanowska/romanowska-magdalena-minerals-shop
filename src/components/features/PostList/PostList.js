@@ -41,7 +41,7 @@ const PostList = ({ posts }) => (
                 <br />
               </div>
             </div>
-            <Link key={post.title} to={`/${post.title}`}>
+            <Link key={post.title} to={`/${post.title}`} className={styles.photoInside}>
               <img src={post.photo} alt={"mineralPhoto"} />
             </Link>
             <div className={styles.line}></div>

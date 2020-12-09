@@ -15,8 +15,6 @@ const Component = ({ className }) => (
       </div>
     </div>
     <div className={styles.posts}>
-      <div  className={styles.stars}></div>
-      <div  className={styles.twinkling}></div>
       <PostList />
     </div>
   </div>
