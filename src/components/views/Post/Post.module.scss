@@ -53,7 +53,7 @@
     margin: 0 80px;
     width: 300px;
     &:hover {
-      transform: scale(1.6);
+      transform: scale(1.2);
       box-shadow: 0 0px 10px $color-importantDark;
     }
   }
@@ -68,6 +68,7 @@
 }
 
 .selectQuantity {
+  font-size: 20px;
   padding: 48px 0 0 0;
   text-align: center;
   text-transform: uppercase;
@@ -75,17 +76,18 @@
 }
 
 .plusAndMinus {
+  font-size: 16px;
   display: inline-flex;
-  padding: 24px 0 0 0;
-  margin-bottom: 24px;
+  padding: 12px 0 0 0;
+  margin-bottom: 12px;
 }
 
 .minus, .plus {
   margin: 0 8px;
   color: $color-light;
   background-color: $color-navyblue;
-  height: 40px;
-  width: 40px;
+  height: 24px;
+  width: 24px;
   border-radius: 15%;
   &:hover {
     box-shadow: 0 0px 10px $color-navyblue;
@@ -93,17 +95,20 @@
 }
 
 .totalPrice {
-  margin: 0 0 12px 0;
+  margin: 0 0 16px 0;
+  font-size: 16px;
 }
 
 .addToChart {
-  color: $color-light;
-  background-color: $color-navyblue;
-  padding: 12px 8px;
+  color: $color-navyblue;
+  background-color: $color-light;
+  border: solid 1px $color-navyblue;
+  padding: 8px 12px;
   border-radius: 3%;
+  font-size: 16px;
     &:hover {
-      color: $color-lightblue;
       text-decoration: none;
+      color: $color-navyblue;
       box-shadow: 0 0px 10px $color-navyblue;
     }
 }
@@ -112,8 +117,8 @@
   margin: 0 8px;
   color: $color-navyblue;
   background-color: $color-light;
-  height: 40px;
-  width: 40px;
+  height: 24px;
+  width: 24px;
   border: solid 1px $color-navyblue;
 }
 
@@ -230,7 +235,7 @@
   }
 
   100% {
-    transform: translateY(-1600px) rotate(720deg);
+    transform: translateY(-1800px) rotate(720deg);
     opacity: 0;
   }
 }

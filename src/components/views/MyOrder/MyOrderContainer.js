@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import PostAdd from './PostAdd';
+import MyOrder from './MyOrder';
 import {addPost} from '../../../redux/postsRedux';
 import {getUserState} from '../../../redux/userStateRedux';
 
@@ -11,5 +11,5 @@ const mapDispatchToProps = dispatch => ({
   addPost: post => dispatch(addPost(post)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostAdd);
+export default connect(mapStateToProps, mapDispatchToProps)(MyOrder);
 

@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .main {
-  background: linear-gradient(-45deg, $color-importantDark, $color-darkblue, $color-darkblue, $color-importantDark);
+  background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
 	background-size: 400% 400%;
 	animation: gradient 8s ease infinite;
   padding: 32px 0;
@@ -30,6 +30,12 @@
   color: $color-light;
   padding: 0 24px;
   font-family: $font-text;
+  transition: text-shadow 0.3s ease-in-out;
+    &:hover {
+      color: $color-light;
+      text-decoration: none;
+      text-shadow: $color-lightblue 0 0 40px, $color-light 0 0 80px, $color-light 0 0 20px, $color-navyblue 0 30px 25px;
+    }
 }
 
 .line {
@@ -39,3 +45,4 @@
   width: 100%;
   background-image: linear-gradient(to right, $color-dark, $color-light, $color-dark);
 }
+

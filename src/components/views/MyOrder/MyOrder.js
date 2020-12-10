@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import styles from './PostAdd.module.scss';
+import styles from './MyOrder.module.scss';
 import { NotFound } from '../NotFound/NotFound';
 
-const PostAdd = ({ className, userState, addPost }) => (
+const MyOrder = ({ className, userState, addPost }) => (
   <div className={clsx(className, styles.root)}>
     {userState === 'loggedUser' && (
       <div>
@@ -83,11 +83,11 @@ const PostAdd = ({ className, userState, addPost }) => (
   </div>
 );
 
-PostAdd.propTypes = {
+MyOrder.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   userState: PropTypes.any,
   addPost: PropTypes.func,
 };
 
-export default PostAdd;
+export default MyOrder;

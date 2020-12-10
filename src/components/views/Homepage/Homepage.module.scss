@@ -5,7 +5,7 @@
 }
 
 .allHomepage {
-  background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
+  background-image: url("https://i.postimg.cc/QC3sCxPZ/geoda-Duza-Pasy.jpg");
   background-size: cover;
   height: 100%;
 }
@@ -16,26 +16,34 @@
 }
 
 .title {
-  color: $color-light;
+  color: $color-darkblue;
   opacity: 0.7;
-  text-shadow: 1px 1px 1px $color-light, 0 0 25px $color-blue, 0 0 25px $color-light;
+  text-shadow: $color-lightblue 0 0 10px, $color-light 0 -1px 80px, $color-light 0 -3px 2px, $color-navyblue 0 30px 25px;
   text-align: center;
   font-family: $font-text;
-  font-size: 160px;
-  font-weight: 400;
+  font-size: 188px;
+  font-weight: bold;
   padding: 96px 0 0 0;
   letter-spacing: 16px;
   margin-top: -780px;
+  z-index: 1;
+  position: relative;
+  transition: text-shadow 0.3s ease-in-out;
+    &:hover {
+      text-shadow: $color-lightblue 0 0 40px, $color-light 0 -1px 80px, $color-light 0 -3px 2px, $color-navyblue 0 30px 25px;
+    }
 }
 
 .subtitle {
   color: $color-light;
   opacity: 0.7;
-  text-shadow: 1px 1px 1px $color-light, 0 0 25px $color-blue, 0 0 25px $color-light;
+  text-shadow: 1px 1px 6px $color-light, 0 0 25px $color-blue, 0 0 25px $color-light;
   font-family: $font-text;
-  font-size: 72px;
-  position: absolute;
-  margin: 320px 0 24px 480px;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 280px;
+  letter-spacing: 16px;
+  font-weight: bold;
 
   .subtitleText {
     text-align: center;
@@ -56,3 +64,4 @@
   display: block;
   position: absolute;
 }
+

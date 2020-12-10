@@ -9,9 +9,9 @@ const Component = ({ className }) => (
     <div className={styles.allHomepage}>
       <div className={styles.background}>
       </div>
-      <div className={styles.title}>YOU ROCK! </div>
+      <div className={styles.title}>ROCK YOUR LIFE</div>
       <div className={styles.subtitle}>
-        Minerals jewelry shop<i class="fa fa-angle-double-down" aria-hidden="true"></i>
+        MINERALS JEWELRY SHOP<i class="fa fa-angle-double-down" aria-hidden="true"></i>
       </div>
     </div>
     <div className={styles.posts}>

@@ -9,7 +9,7 @@ const Header = ({ className }) => (
     <div className={styles.main}>
       <div className={styles.allLinks}>
         <Link to={`/`} className={styles.links}>Home</Link>
-        <Link to={`/post/add`} className={styles.links}>My order</Link>
+        <Link to={`/myOrder`} className={styles.links}>My order</Link>
       </div>
     </div>
     <div className={styles.line}></div>

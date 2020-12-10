@@ -47,7 +47,7 @@ const Post = ({ post }) => (
                 <div className={styles.plus}>+</div>
               </div>
               <div className={styles.totalPrice}>
-                <div className={styles.total}>Total :</div>
+                <div className={styles.total}>Total price:</div>
                 <div className={styles.totalBox}></div>
               </div>
               <div>
@@ -71,7 +71,7 @@ const Post = ({ post }) => (
                 <div className={styles.plus}>+</div>
               </div>
               <div className={styles.totalPrice}>
-                <div className={styles.total}>Total :</div>
+                <div className={styles.total}>Total price:</div>
                 <div className={styles.totalBox}></div>
               </div>
               <div>
@@ -95,7 +95,7 @@ const Post = ({ post }) => (
                 <div className={styles.plus}>+</div>
               </div>
               <div className={styles.totalPrice}>
-                <div className={styles.total}>Total :</div>
+                <div className={styles.total}>Total price:</div>
                 <div className={styles.totalBox}></div>
               </div>
               <div>

@@ -23,6 +23,22 @@ const PostList = ({ posts }) => (
         <li></li>
         <li></li>
         <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
     <div className={styles.allProducts}>
@@ -32,7 +48,7 @@ const PostList = ({ posts }) => (
             <div className={styles.mineralText}>
               <div className={styles.mineralName}>
                 <div className={styles.mineralNameTitle}>Mineral name:</div>
-                <div className={styles.mineralNameContent}>{post.title}</div>
+                <div className={styles.mineralNameContent}><b>{post.title}</b></div>
                 <br />
               </div>
               <div className={styles.mineralPrice}>
