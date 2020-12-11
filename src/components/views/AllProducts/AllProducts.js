@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AllProducts.module.scss';
-import PostList from '../../features/PostList/PostListContainer';
+import PostList from '../PostList/PostListContainer';
 
 const MyPosts = () => (
   <div className={styles.main}> All products:

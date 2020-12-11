@@ -1,5 +1,9 @@
 @import "../../../styles/settings.scss";
 
+.root {
+max-width: 100%;
+}
+
 .main {
   background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
 	background-size: 400% 400%;
@@ -46,3 +50,48 @@
   background-image: linear-gradient(to right, $color-dark, $color-light, $color-dark);
 }
 
+@media (max-width: 767px) { //sm
+  .allLinks {
+    padding: 0 0 0 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 411px) { // pixel 2 xl
+  .allLinks {
+    padding: 0 48px 0 0;
+  }
+}
+
+@media (max-width: 568px) { // sm poziom
+  .allLinks {
+    padding: 0 160px 0 0;
+  }
+
+  .links {
+    padding: 0 12px;
+  }
+
+  .main {
+    background-size: 200% 200%;
+  }
+
+  .line {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {   //iPad
+ 
+  
+}
+
+@media (max-width: 992px) { //lg
+  
+  
+}
+
+@media (max-width: 1200px) { //xl
+  
+  
+}

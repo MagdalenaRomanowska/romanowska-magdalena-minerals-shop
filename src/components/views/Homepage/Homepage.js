@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PostList from "../../features/PostList/PostListContainer";
+import PostList from "../PostList/PostListContainer";
 import clsx from "clsx";
 import styles from "./Homepage.module.scss";
 
-const Component = ({ className }) => (
+const Homepage = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.allHomepage}>
       <div className={styles.background}>
@@ -20,11 +20,8 @@ const Component = ({ className }) => (
   </div>
 );
 
-Component.propTypes = {
+Homepage.propTypes = {
   className: PropTypes.string,
 };
 
-export {
-  Component as Homepage,
-  Component as HomepageComponent,
-};
+export default Homepage;
