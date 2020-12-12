@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import styles from "./Post.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import styles from './Post.module.scss';
 
 const Post = ({ post }) => (
   <div className={styles.main}>
@@ -19,25 +19,25 @@ const Post = ({ post }) => (
         <li></li>
       </ul>
       <div className={styles.postContent}>
-        <div className={styles.detailTitle}>{post ? post.title : ""}</div>
-        <div className={styles.detailText}>{post ? post.text : ""}</div>
+        <div className={styles.detailTitle}>{post ? post.title : ''}</div>
+        <div className={styles.detailText}>{post ? post.text : ''}</div>
         <div className={styles.photoDescription}>
-          {post ? post.photoDescription : ""}
+          {post ? post.photoDescription : ''}
         </div>
         <div className={styles.detailPhoto}>
-          <img src={post ? post.photo : ""} alt={"mineralPhoto"} />
-          <img src={post ? post.photo2 : ""} alt={"mineralPhoto2"} />
-          <img src={post ? post.photo3 : ""} alt={"mineralPhoto3"} />
+          <img src={post ? post.photo : ''} alt={'mineralPhoto'} />
+          <img src={post ? post.photo2 : ''} alt={'mineralPhoto2'} />
+          <img src={post ? post.photo3 : ''} alt={'mineralPhoto3'} />
         </div>
         <div className={styles.photoDescription2}>
-          {post ? post.photoDescription2 : ""}
+          {post ? post.photoDescription2 : ''}
         </div>
         <div className={styles.detailPhoto}>
           <div>
-            <img src={post ? post.photoBracelet : ""} alt={"photoBracelet"} />
+            <img src={post ? post.photoBracelet : ''} alt={'photoBracelet'} />
             <h2>Bracelet</h2>
             <div className={styles.postDetailPrice}>
-              Price: {post ? post.price : ""}
+              Price: {post ? post.price : ''}
             </div>
             <div className={styles.selectQuantity}>
               <div>Select quantity</div>
@@ -50,18 +50,16 @@ const Post = ({ post }) => (
                 <div className={styles.total}>Total price:</div>
                 <div className={styles.totalBox}></div>
               </div>
-              <div>
-                <Link to={`/myOrder`} className={styles.addToChart}>
-                  Add to chart
-                </Link>
+              <div className={styles.addToChartContainer}>
+                <p className={styles.addToChart}>Add to cart</p>
               </div>
             </div>
           </div>
           <div>
-            <img src={post ? post.photoEarings : ""} alt={"photoEarings"} />
+            <img src={post ? post.photoEarings : ''} alt={'photoEarings'} />
             <h2>Earings</h2>
             <div className={styles.postDetailPrice}>
-              Price: {post ? post.price2 : ""}
+              Price: {post ? post.price2 : ''}
             </div>
             <div className={styles.selectQuantity}>
               <div>Select quantity</div>
@@ -74,18 +72,16 @@ const Post = ({ post }) => (
                 <div className={styles.total}>Total price:</div>
                 <div className={styles.totalBox}></div>
               </div>
-              <div>
-                <Link to={`/myOrder`} className={styles.addToChart}>
-                  Add to chart
-                </Link>
+              <div className={styles.addToChartContainer}>
+                <p className={styles.addToChart}>Add to cart</p>
               </div>
             </div>
           </div>
           <div>
-            <img src={post ? post.photoRing : ""} alt={"photoRing"} />
+            <img src={post ? post.photoRing : ''} alt={'photoRing'} />
             <h2>Ring</h2>
             <div className={styles.postDetailPrice}>
-              Price: {post ? post.price3 : ""}
+              Price: {post ? post.price3 : ''}
             </div>
             <div className={styles.selectQuantity}>
               <div>Select quantity</div>
@@ -98,13 +94,16 @@ const Post = ({ post }) => (
                 <div className={styles.total}>Total price:</div>
                 <div className={styles.totalBox}></div>
               </div>
-              <div>
-                <Link to={`/myOrder`} className={styles.addToChart}>
-                  Add to chart
-                </Link>
+              <div className={styles.addToChartContainer}>
+                <p className={styles.addToChart}>Add to cart</p>
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.basketContainer}>
+          <Link to={`/basket`} className={styles.basket}>
+            Go to basket
+          </Link>
         </div>
       </div>
     </div>

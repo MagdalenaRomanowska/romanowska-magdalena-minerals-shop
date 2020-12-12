@@ -6,9 +6,12 @@
 }
 
 .colorForMoment {
-  background-color: lightgrey;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;
+  font-size: 80px;
   width: 1700px;
   height: 300px;
+  background-color: rgb(149, 143, 136);
 }
 
 .postAdd {

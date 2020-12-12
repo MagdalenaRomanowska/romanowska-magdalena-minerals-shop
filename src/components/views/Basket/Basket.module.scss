@@ -1,0 +1,81 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 24px 0 48px 48px;
+}
+
+.line {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 18%;
+  background-image: linear-gradient(
+    to right,
+    $color-light,
+    $color-dark,
+    $color-light
+  );
+}
+
+.cart {
+  font-family: $font-text;
+  font-size: 20px;
+  color: $color-navyblue;
+}
+
+.cartContentTitle {
+  font-size: 60px;
+  color: $color-importantDark;
+  padding: 20px 0 60px 0;
+}
+
+.orderedMinerals {
+  list-style-type: none;
+  li {
+    padding: 12px 0;
+    width: 400px;
+    background-color: yellowgreen;
+    display: flex;
+    .icons {
+      margin-left: auto;
+      i {
+        padding: 0 4px;
+        &:hover {
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+.cartOrderPrice {
+  font-size: 22px;
+  list-style-type: none;
+  li {
+    padding: 12px 0;
+  }
+}
+
+.clickToOrder {
+  text-transform: uppercase;
+  background: linear-gradient(
+    -45deg,
+    $color-blue,
+    $color-importantDark,
+    $color-darkblue,
+    $color-importantDark,
+    $color-blue
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  padding: 20px 48px;
+  color: $color-light;
+  border: solid 1px black;
+  font-size: 32px;
+  transition: box-shadow 0.2s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    color: $color-light;
+    box-shadow: 0 0px 10px $color-navyblue;
+  }
+}
