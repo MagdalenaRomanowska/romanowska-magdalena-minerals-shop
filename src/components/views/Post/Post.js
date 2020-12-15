@@ -19,7 +19,7 @@ const Post = ({ post }) => (
         <li></li>
       </ul>
       <div className={styles.postContent}>
-        <div className={styles.detailTitle}>{post ? post.title : ''}</div>
+        <div className={styles.detailTitle}><i className={'far fa-gem'}></i> &nbsp; {post ? post.title : ''}  &nbsp; <i className={'far fa-gem'}></i></div>
         <div className={styles.detailText}>{post ? post.text : ''}</div>
         <div className={styles.photoDescription}>
           {post ? post.photoDescription : ''}
@@ -101,7 +101,7 @@ const Post = ({ post }) => (
           </div>
         </div>
         <div className={styles.basketContainer}>
-          <Link to={`/basket`} className={styles.basket}>
+          <Link to={`/basket`} className={styles.goToBasket}>
             Go to basket
           </Link>
         </div>

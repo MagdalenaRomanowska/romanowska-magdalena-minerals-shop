@@ -1,47 +1,128 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding: 24px 0 48px 48px;
-  //background: rgb(183, 196, 255);
+  padding: 24px 48px 48px 48px;
+  background: $color-lightblue;
+  height: 136vh;
 }
 
-.colorForMoment {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
-  color: transparent;
-  font-size: 80px;
-  width: 1700px;
-  height: 300px;
-  background-color: rgb(149, 143, 136);
+.line {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 18%;
+  background-image: linear-gradient(
+    to right,
+    $color-light,
+    $color-dark,
+    $color-light
+  );
 }
 
-.postAdd {
-  color: rgb(82, 11, 214);
-  font-size: 24px;
+.cart {
+  font-family: $font-text;
+  font-size: 20px;
+  color: $color-navyblue;
 }
 
-.postDetail {
+.cartContentTitle {
+  font-size: 60px;
+  color: $color-importantDark;
+  padding: 20px 0 60px 36px;
+}
+
+.chosenItems {
+  min-width: 400px;
+}
+
+.amountAll {
+  width: 200px;
+  text-align: center;
+}
+
+.price {
+  width: 300px;
+  text-align: center;
+}
+
+.comment {
+  width: 400px;
+  text-align: left;
+  input {
+    padding: 4px 0 4px 4px;
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+.orderedMinerals {
+  list-style-type: none;
+  font-size: 22px;
+  li {
+    padding: 12px 0;
+    width: 1400px;
+    display: flex;
+    .icons {
+      margin-left: auto;
+      i {
+        padding: 0 4px;
+        &:hover {
+          color: $color-important;
+        }
+      }
+    }
+  }
+}
+
+.cartOrderPrice {
+  font-size: 22px;
+  list-style-type: none;
+  margin-bottom: 60px;
+  li {
+    padding: 12px 0;
+  }
+}
+
+.contactForm {
+  margin: 0 0 120px 48px;
+}
+
+.nameOfParameter {
+  width: 200px;
+}
+
+input {
+  &:hover {
+    box-shadow: 0 0px 8px $color-navyblue;
+  }
+}
+
+.clientData {
   display: inline-flex;
-  width: 180px;
-  padding-top: 32px;
 }
 
-.postDetail2 {
-  display: inline-flex;
-  padding-top: 32px;
-}
-
-.login {
-  background: rgb(57, 235, 241);
-  color: white;
-  margin: 48px 0 0 48px;
-  font-size: 24px;
-  padding: 12px;
-  border: 5px solid white;
-  border-radius: 5px;
-  width: fit-content;
-  display: inline-flex;
-}
-
-.textareaDetail2 {
-  width: 600px;
+.clickToOrder {
+  text-transform: uppercase;
+  background: linear-gradient(
+    -45deg,
+    $color-blue,
+    $color-importantDark,
+    $color-darkblue,
+    $color-importantDark,
+    $color-blue
+  );
+  background-size: 200% 200%;
+  margin: 0 0 0 48px;
+  animation: gradient 8s ease infinite;
+  padding: 20px 40px;
+  color: $color-light;
+  border: solid 1px black;
+  font-size: 32px;
+  position: relative;
+    &:hover {
+    text-decoration: none;
+    color: $color-light;
+    box-shadow: 0 0px 20px $color-navyblue;
+    font-weight: bold;
+  }
 }

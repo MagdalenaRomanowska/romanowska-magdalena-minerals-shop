@@ -1,5 +1,9 @@
 @import "../../../styles/settings.scss";
 
+.root {
+  height: 274vh;
+}
+
 .allHomepage {
   background-image: url("https://i.postimg.cc/QC3sCxPZ/geoda-Duza-Pasy.jpg");
   background-size: cover;
@@ -11,43 +15,76 @@
   height: 100%;
 }
 
-.title {
-  color:$color-navyblue;
-  opacity: 0.7;
-  text-shadow: $color-lightblue 0 0 10px, $color-light 0 -1px 80px, $color-light 0 -3px 2px, $color-navyblue 0 30px 25px;
+.gem2 {
+  color: $color-light;
   text-align: center;
-  margin-top: -780px;
+  font-size: 48px;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.gem3 {
+  color: $color-light;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 32px;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.gem4 {
+  color: $color-light;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 32px;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.title {
+  margin-top: -732px;
+  padding-bottom: 48px;
+  color: $color-darkblue;
+  opacity: 0.8;
+  text-shadow: $color-lightblue 0 0 10px, $color-light 0 -1px 80px,
+    $color-light 5px -5px 2px, $color-navyblue 0 30px 25px;
+  text-align: center;
   font-family: $font-title;
-  font-size: 132px;
+  font-size: 160px;
   font-weight: bold;
-  padding: 96px 0 0 0;
   letter-spacing: 16px;
   z-index: 1;
   position: relative;
   transition: text-shadow 0.3s ease-in-out;
-    &:hover {
-      text-shadow: $color-lightblue 0 0 40px, $color-light 0 -1px 80px, $color-light 0 -3px 2px, $color-navyblue 0 30px 25px;
-    }
+  &:hover {
+    text-shadow: $color-lightblue 0 0 40px, $color-light 0 -1px 80px,
+      $color-light 0 -7px 2px, $color-navyblue 0 30px 25px;
+  }
 }
 
 .subtitle {
   color: $color-light;
   opacity: 0.7;
-  text-shadow: 1px 1px 6px $color-light, 0 0 25px $color-blue, 0 0 25px $color-light;
+  text-shadow: 1px 1px 6px $color-light, 0 0 25px $color-blue,
+    0 0 25px $color-light;
   font-family: $font-text;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
-  margin-top: 320px;
+  margin-top: 132px;
   letter-spacing: 16px;
   font-weight: bold;
-  
   .subtitleText {
     text-align: center;
   }
-
   i {
-    font-size: 72px;
-    padding: 0 0 0 48px;
+    font-size: 48px;
+    padding: 0 0 0 40px;
   }
 }
 
@@ -61,12 +98,13 @@
   position: absolute;
 }
 
-@media (max-width: 767px) { //sm
+@media (max-width: 767px) {
+  //sm
 
   // .allHomepage {
   //   padding-top: 360px;
   // }
-  
+
   // .title {
   // font-size: 48px;
   // margin-top: -400px;
@@ -88,25 +126,22 @@
   // }
 }
 
-@media (max-width: 411px) { // pixel 2 xl
-  
+@media (max-width: 411px) {
+  // pixel 2 xl
 }
 
-@media (max-width: 568px) { // sm poziom
-  
+@media (max-width: 568px) {
+  // sm poziom
 }
 
-@media (max-width: 768px) {   //iPad
- 
-  
+@media (max-width: 768px) {
+  //iPad
 }
 
-@media (max-width: 992px) { //lg
-  
-  
+@media (max-width: 992px) {
+  //lg
 }
 
-@media (max-width: 1200px) { //xl
-  
-  
+@media (max-width: 1200px) {
+  //xl
 }

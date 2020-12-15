@@ -1,21 +1,18 @@
 import React from 'react';
+import clsx from 'clsx';
+import styles from './NotFound.module.scss';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './NotFound.module.scss';
 
-const Component = ({className, children}) => (
-  <div className={styles.main}>
+const NotFound = ({ className }) => (
+  <div className={clsx(className, styles.root)}>
     <div className={styles.text}>Sorry... Page Not Found</div>
     <div className={styles.login}><Link to={`/`}>Back to homepage</Link></div>
   </div>
 );
 
-Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
+NotFound.propTypes = {
+  className: PropTypes.any,
 };
 
-export {
-  Component as NotFound,
-  Component as NotFoundComponent,
-};
+export default NotFound;

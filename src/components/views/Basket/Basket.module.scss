@@ -2,6 +2,8 @@
 
 .root {
   padding: 24px 0 48px 48px;
+  background: $color-lightblue;
+  height: 88vh;
 }
 
 .line {
@@ -26,22 +28,64 @@
 .cartContentTitle {
   font-size: 60px;
   color: $color-importantDark;
-  padding: 20px 0 60px 0;
+  padding: 20px 0 60px 36px;
+}
+
+.chosenItems {
+  min-width: 400px;
+}
+
+.amountAll {
+  width: 200px;
+}
+
+.plusAndMinus {
+  font-size: 16px;
+  display: inline-flex;
+}
+
+.minus,
+.plus {
+  margin: 0 12px;
+  color: $color-light;
+  background-color: $color-navyblue;
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border-radius: 15%;
+  &:hover {
+    box-shadow: 0 0px 10px $color-navyblue;
+  }
+}
+
+.price {
+  width: 300px;
+  text-align: center;
+}
+
+.comment {
+  width: 400px;
+  text-align: center;
+  input {
+    padding: 4px 0 4px 4px;
+    font-size: 12px;
+    width: 100%;
+  }
 }
 
 .orderedMinerals {
   list-style-type: none;
+  font-size: 22px;
   li {
     padding: 12px 0;
-    width: 400px;
-    background-color: yellowgreen;
+    width: 1400px;
     display: flex;
     .icons {
       margin-left: auto;
       i {
         padding: 0 4px;
         &:hover {
-          color: red;
+          color: $color-important;
         }
       }
     }
@@ -51,12 +95,13 @@
 .cartOrderPrice {
   font-size: 22px;
   list-style-type: none;
+  margin-bottom: 120px;
   li {
     padding: 12px 0;
   }
 }
 
-.clickToOrder {
+.clickToContinue {
   text-transform: uppercase;
   background: linear-gradient(
     -45deg,
@@ -67,15 +112,18 @@
     $color-blue
   );
   background-size: 200% 200%;
+  margin: 0 0 0 48px;
   animation: gradient 8s ease infinite;
-  padding: 20px 48px;
+  padding: 20px 40px;
   color: $color-light;
   border: solid 1px black;
   font-size: 32px;
-  transition: box-shadow 0.2s ease-in-out;
+  position: relative;
+  z-index: 1;
   &:hover {
     text-decoration: none;
     color: $color-light;
-    box-shadow: 0 0px 10px $color-navyblue;
+    box-shadow: 0 0px 20px $color-navyblue;
+    font-weight: bold;
   }
 }

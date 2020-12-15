@@ -1,0 +1,83 @@
+@import "../../../styles/settings.scss";
+
+.root {
+max-width: 100%;
+}
+
+.main {
+  background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
+  background-size: cover;
+}
+
+.allLinks {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  font-size: 32px;
+}
+
+.links {
+  color: $color-light;
+  padding: 0 24px;
+  font-family: $font-text;
+  transition: text-shadow 0.3s ease-in-out;
+    &:hover {
+      color: $color-light;
+      text-decoration: none;
+      text-shadow: $color-lightblue 0 0 40px, $color-light 0 0 80px, $color-light 0 0 20px, $color-navyblue 0 30px 25px;
+    }
+}
+
+.line {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, $color-dark, $color-light, $color-dark);
+}
+
+@media (max-width: 767px) { //sm
+  .allLinks {
+    padding: 0 0 0 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 411px) { // pixel 2 xl
+  .allLinks {
+    padding: 0 48px 0 0;
+  }
+}
+
+@media (max-width: 568px) { // sm poziom
+  .allLinks {
+    padding: 0 160px 0 0;
+  }
+
+  .links {
+    padding: 0 12px;
+  }
+
+  .main {
+    background-size: 200% 200%;
+  }
+
+  .line {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {   //iPad
+ 
+  
+}
+
+@media (max-width: 992px) { //lg
+  
+  
+}
+
+@media (max-width: 1200px) { //xl
+  
+  
+}

@@ -7,11 +7,9 @@ import { store } from './redux/store';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import  Post  from './components/views/Post/PostContainer';
-import  PostEdit  from './components/views/PostEdit/PostEditContainer';
 import  Basket   from './components/views/Basket/BasketContainer';
 import  MyOrder   from './components/views/MyOrder/MyOrderContainer';
-import { NotFound } from './components/views/NotFound/NotFound';
-import  AllProducts  from './components/views/AllProducts/AllProducts';
+import  NotFound  from './components/views/NotFound/NotFound';
 
 const theme = createMuiTheme({
   palette: {
@@ -31,8 +29,6 @@ const App = () => (
               <Route exact path='/basket' component={Basket} />
               <Route exact path='/myOrder' component={MyOrder} />
               <Route exact path='/:id' component={Post} />
-              <Route exact path='/post/:id/edit' component={PostEdit} />
-              <Route exact path='/allProducts' component={AllProducts} />
               <Route path='*' component={NotFound} />
             </Switch>
           </MainLayout>

@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./PostList.module.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './MineralsList.module.scss';
+import { Link } from 'react-router-dom';
 
-const PostList = ({ posts }) => (
+const MineralsList = ({ posts }) => (
   <div className={styles.productDescription}>
     <div className={styles.squaresLeftSided}>
       <ul className={styles.squares}>
@@ -44,7 +44,7 @@ const PostList = ({ posts }) => (
     <div className={styles.allProducts}>
       {posts.length ? (
         posts.map((post) => (
-          <div className={styles.product}>
+          <div className={styles.product} key={post.title}>
             <div className={styles.mineralText}>
               <div className={styles.mineralName}>
                 <div className={styles.mineralNameTitle}>Mineral name:</div>
@@ -58,7 +58,7 @@ const PostList = ({ posts }) => (
               </div>
             </div>
             <Link key={post.title} to={`/${post.title}`} className={styles.photoInside}>
-              <img src={post.photo} alt={"mineralPhoto"} />
+              <img src={post.photo} alt={'mineralPhoto'} />
             </Link>
             <div className={styles.line}></div>
           </div>
@@ -71,9 +71,9 @@ const PostList = ({ posts }) => (
   </div>
 );
 
-PostList.propTypes = {
+MineralsList.propTypes = {
   posts: PropTypes.any,
   title: PropTypes.any,
 };
 
-export default PostList;
+export default MineralsList;
