@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './Post.module.scss';
+import styles from './MineralPost.module.scss';
 
-const Post = ({ post }) => (
+const MineralPost = ({ post }) => (
   <div className={styles.main}>
     <div className={styles.background}>
       <ul className={styles.squares}>
@@ -110,8 +110,8 @@ const Post = ({ post }) => (
   </div>
 );
 
-Post.propTypes = {
+MineralPost.propTypes = {
   post: PropTypes.any,
 };
 
-export default Post;
+export default MineralPost;

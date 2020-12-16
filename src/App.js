@@ -6,7 +6,7 @@ import { CssBaseline } from '@material-ui/core';
 import { store } from './redux/store';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
-import  Post  from './components/views/Post/PostContainer';
+import  MineralPost  from './components/views/MineralPost/MineralPostContainer';
 import  Basket   from './components/views/Basket/BasketContainer';
 import  MyOrder   from './components/views/MyOrder/MyOrderContainer';
 import  NotFound  from './components/views/NotFound/NotFound';
@@ -28,7 +28,7 @@ const App = () => (
               <Route exact path='/' component={Homepage} />
               <Route exact path='/basket' component={Basket} />
               <Route exact path='/myOrder' component={MyOrder} />
-              <Route exact path='/minerals/:id' component={Post} />
+              <Route exact path='/minerals/:id' component={MineralPost} />
               <Route path='*' component={NotFound} />
             </Switch>
           </MainLayout>
