@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Wave.module.scss";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Wave.module.scss';
 
 const Component = ({ className, children }) => (
-  <div className={styles.main}>
+  <div className={styles.root}>
     <div className={styles.ocean}>
       <div className={styles.wave}></div>
       <div className={styles.wave}></div>

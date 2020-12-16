@@ -2,11 +2,10 @@
 
 .root {
 max-width: 100%;
-}
-
-.main {
-  background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
-  background-size: cover;
+height: 16vh;
+background: $color-lightblue;
+overflow: hidden;
+position: relative;
 }
 
 .allLinks {
@@ -14,26 +13,20 @@ max-width: 100%;
   justify-content: center;
   padding: 40px 0;
   font-size: 32px;
+  position: relative;
+  z-index: 1;
 }
 
 .links {
-  color: $color-light;
-  padding: 0 24px;
+  color: $color-navyblue;
+  padding: 0 24px 0 24px;
   font-family: $font-text;
   transition: text-shadow 0.3s ease-in-out;
     &:hover {
-      color: $color-light;
+      color: $color-navyblue;
       text-decoration: none;
-      text-shadow: $color-lightblue 0 0 40px, $color-light 0 0 80px, $color-light 0 0 20px, $color-navyblue 0 30px 25px;
+      text-shadow: $color-lightblue 0 0 40px, $color-navyblue 0 0 80px, $color-navyblue 0 0 20px;
     }
-}
-
-.line {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-image: linear-gradient(to right, $color-dark, $color-light, $color-dark);
 }
 
 @media (max-width: 767px) { //sm

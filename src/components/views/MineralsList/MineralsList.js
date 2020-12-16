@@ -57,10 +57,9 @@ const MineralsList = ({ posts }) => (
                 <br />
               </div>
             </div>
-            <Link key={post.title} to={`/${post.title}`} className={styles.photoInside}>
+            <Link key={post.title} to={`/minerals/${post.title}`} className={styles.photoInside}>
               <img src={post.photo} alt={'mineralPhoto'} />
             </Link>
-            <div className={styles.line}></div>
           </div>
         ))
       ) : (

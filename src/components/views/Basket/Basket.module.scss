@@ -29,6 +29,9 @@
   font-size: 60px;
   color: $color-importantDark;
   padding: 20px 0 60px 36px;
+  &:hover {
+    color: $color-navyblue;
+  }
 }
 
 .chosenItems {

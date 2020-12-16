@@ -1,12 +1,39 @@
 @import '../../../styles/settings.scss';
 
-.main {
-    background: rgb(183, 196, 255);
-    padding: 0 0 24px 0;
+.root {
+    background-color: $color-lightblue;
+    color: $color-navyblue;
+    height: 75vh;
+    font-family: $font-text;
  }
 
 .text {
-    margin-left: 48px;
-    font-size: 24px;
-    padding: 24px 0;
+    font-size: 60px;
+    padding: 100px 0 120px 48px;
 }
+
+.backToHomepage {
+    text-transform: uppercase;
+    width: fit-content; 
+    background: linear-gradient(
+      -45deg,
+      $color-blue,
+      $color-importantDark,
+      $color-darkblue,
+      $color-importantDark,
+      $color-blue
+    );
+    background-size: 200% 200%;
+    margin: 0 0 0 48px;
+    padding: 20px 40px;
+    color: $color-light;
+    border: solid 1px black;
+    font-size: 32px;
+    position: relative;
+    z-index: 1;
+    &:hover {
+      box-shadow: 0 0px 20px $color-navyblue;
+      text-decoration: none;
+      color: $color-light;
+    }
+  }

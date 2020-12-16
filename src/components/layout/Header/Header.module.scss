@@ -1,45 +1,58 @@
 @import "../../../styles/settings.scss";
 
 .root {
-max-width: 100%;
+  max-width: 100%;
+  height: 12vh;
+  position: relative;
 }
 
 .main {
-  background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
-	background-size: 400% 400%;
-	animation: gradient 8s ease infinite;
-  padding: 32px 0;
+  background: linear-gradient(
+    -45deg,
+    $color-blue,
+    $color-importantDark,
+    $color-darkblue,
+    $color-importantDark,
+    $color-blue
+  );
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
+  height: 100%;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .allLinks {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 48px 0 0;
-  font-size: 32px;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .links {
   color: $color-light;
   padding: 0 24px;
   font-family: $font-text;
+  text-transform: uppercase;
   transition: text-shadow 0.3s ease-in-out;
-    &:hover {
-      color: $color-light;
-      text-decoration: none;
-      text-shadow: $color-lightblue 0 0 40px, $color-light 0 0 80px, $color-light 0 0 20px, $color-navyblue 0 30px 25px;
-    }
+  &:hover {
+    color: $color-light;
+    text-decoration: none;
+    text-shadow: $color-lightblue 0 0 40px, $color-light 0 0 80px,
+      $color-light 0 0 20px, $color-navyblue 0 30px 25px;
+  }
 }
 
 .line {
@@ -47,51 +60,55 @@ max-width: 100%;
   content: "";
   height: 1px;
   width: 100%;
-  background-image: linear-gradient(to right, $color-dark, $color-light, $color-dark);
+  background-image: linear-gradient(
+    to right,
+    $color-dark,
+    $color-light,
+    $color-dark
+  );
 }
 
-@media (max-width: 767px) { //sm
-  .allLinks {
-    padding: 0 0 0 0;
-    font-size: 16px;
-  }
-}
+// @media (max-width: 767px) {
+//   //sm
+//   .allLinks {
+//     font-size: 16px;
+//   }
+// }
 
-@media (max-width: 411px) { // pixel 2 xl
-  .allLinks {
-    padding: 0 48px 0 0;
-  }
-}
+// @media (max-width: 411px) {
+//   // pixel 2 xl
+//   .allLinks {
+//     padding: 0 48px 0 0;
+//   }
+// }
 
-@media (max-width: 568px) { // sm poziom
-  .allLinks {
-    padding: 0 160px 0 0;
-  }
+// @media (max-width: 568px) {
+//   // sm poziom
+//   .allLinks {
+//     padding: 0 160px 0 0;
+//   }
 
-  .links {
-    padding: 0 12px;
-  }
+//   .links {
+//     padding: 0 12px;
+//   }
 
-  .main {
-    background-size: 200% 200%;
-  }
+//   .main {
+//     background-size: 200% 200%;
+//   }
 
-  .line {
-    width: 75%;
-  }
-}
+//   .line {
+//     width: 75%;
+//   }
+// }
 
-@media (max-width: 768px) {   //iPad
- 
-  
-}
+// @media (max-width: 768px) {
+//   //iPad
+// }
 
-@media (max-width: 992px) { //lg
-  
-  
-}
+// @media (max-width: 992px) {
+//   //lg
+// }
 
-@media (max-width: 1200px) { //xl
-  
-  
-}
+// @media (max-width: 1200px) {
+//   //xl
+// }

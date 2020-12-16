@@ -7,14 +7,12 @@ import styles from './Homepage.module.scss';
 const Homepage = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.allHomepage}>
-      <div className={styles.background}>
-      </div>
-      <div className={styles.title}>ROCK YOURSELF</div>
-      <div className={styles.gem2}><i className={'far fa-gem'}></i></div>
-      <div className={styles.gem3}><i className={'far fa-gem'}></i></div>
-      <div className={styles.gem4}><i className={'far fa-gem'}></i></div>
-      <div className={styles.subtitle}>
-        MINERALS JEWELRY SHOP<i className={'fa fa-angle-double-down'} aria-hidden='true'></i>
+      <div className={styles.background}></div>
+      <div className={styles.title}>
+        R<i className={'far fa-gem'}></i>CK <br></br>Y<i className={'far fa-gem'}></i>URSELF<br></br>
+        <div className={styles.subtitle}>
+          MINERALS JEWELRY SHOP
+        </div>
       </div>
     </div>
     <div className={styles.posts}>

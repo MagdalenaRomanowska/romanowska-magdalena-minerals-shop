@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const NotFound = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <div className={styles.text}>Sorry... Page Not Found</div>
-    <div className={styles.login}><Link to={`/`}>Back to homepage</Link></div>
+    <div><Link to={`/`} className={styles.backToHomepage}>Back to homepage</Link></div>
   </div>
 );
 

@@ -1,13 +1,14 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  height: 274vh;
+  display: block;
+  overflow: auto;
 }
 
 .allHomepage {
   background-image: url("https://i.postimg.cc/QC3sCxPZ/geoda-Duza-Pasy.jpg");
   background-size: cover;
-  height: 840px;
+  height: 88vh;
 }
 
 .background {
@@ -15,87 +16,43 @@
   height: 100%;
 }
 
-.gem2 {
-  color: $color-light;
-  text-align: center;
-  font-size: 48px;
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1.5);
-  }
-}
-
-.gem3 {
-  color: $color-light;
-  text-align: center;
-  font-size: 28px;
-  margin-top: 32px;
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1.5);
-  }
-}
-
-.gem4 {
-  color: $color-light;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 32px;
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1.5);
-  }
-}
-
 .title {
-  margin-top: -732px;
-  padding-bottom: 48px;
-  color: $color-darkblue;
+  top: -70vh;
+  color: $color-light;
   opacity: 0.8;
-  text-shadow: $color-lightblue 0 0 10px, $color-light 0 -1px 80px,
-    $color-light 5px -5px 2px, $color-navyblue 0 30px 25px;
+  text-shadow: $color-lightblue 0 0 10px, $color-dark 0 -1px 80px,
+    $color-dark 5px -5px 2px, $color-navyblue 0 30px 25px;
   text-align: center;
   font-family: $font-title;
-  font-size: 160px;
+  font-size: 132px;
   font-weight: bold;
   letter-spacing: 16px;
   z-index: 1;
   position: relative;
-  transition: text-shadow 0.3s ease-in-out;
+  
+  i {
+    font-size: 116px;
+    transition: text-shadow 0.3s ease-in-out;
   &:hover {
-    text-shadow: $color-lightblue 0 0 40px, $color-light 0 -1px 80px,
-      $color-light 0 -7px 2px, $color-navyblue 0 30px 25px;
+    text-shadow: $color-lightblue 0 0 10px, $color-light 0 0 10px,
+      $color-light 0 0 2px, $color-navyblue 0 0 5px;
+  }
   }
 }
 
 .subtitle {
-  color: $color-light;
   opacity: 0.7;
   text-shadow: 1px 1px 6px $color-light, 0 0 25px $color-blue,
     0 0 25px $color-light;
   font-family: $font-text;
   font-size: 28px;
-  text-align: center;
-  margin-top: 132px;
   letter-spacing: 16px;
-  font-weight: bold;
-  .subtitleText {
-    text-align: center;
-  }
-  i {
-    font-size: 48px;
-    padding: 0 0 0 40px;
-  }
 }
 
 .posts {
   font-size: 24px;
-  padding: 160px 0 48px 0;
-  top: 840px;
-  left: 0;
-  right: 0;
-  display: block;
-  position: absolute;
+  padding: 80px 0;
+  background: $color-lightblue;
 }
 
 @media (max-width: 767px) {

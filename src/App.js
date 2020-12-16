@@ -28,7 +28,7 @@ const App = () => (
               <Route exact path='/' component={Homepage} />
               <Route exact path='/basket' component={Basket} />
               <Route exact path='/myOrder' component={MyOrder} />
-              <Route exact path='/:id' component={Post} />
+              <Route exact path='/minerals/:id' component={Post} />
               <Route path='*' component={NotFound} />
             </Switch>
           </MainLayout>
