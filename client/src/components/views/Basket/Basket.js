@@ -22,7 +22,7 @@ const Basket = ({ className }) => (
                 <b>PRICE OF 1 ITEM</b>
               </div>
               <div className={styles.comment}>
-                <b>COMMENT YOUR ORDER</b>
+                <b>COMMENT YOUR ORDER (size etc.)</b>
               </div>
               <div className={styles.icons}></div>
             </li>
