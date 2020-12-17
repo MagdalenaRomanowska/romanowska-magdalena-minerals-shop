@@ -53,6 +53,26 @@
     text-shadow: $color-lightblue 0 0 40px, $color-light 0 0 80px,
       $color-light 0 0 20px, $color-navyblue 0 30px 25px;
   }
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    bottom: 0;
+    left: 5%;
+    background-color: $color-light;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    }
+    &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    }
 }
 
 .line {

@@ -274,10 +274,6 @@ class MineralsList extends React.Component {
                       <b>{post.title}</b>
                     </div>
                   </div>
-                  <div className={styles.mineralPrice}>
-                    <div className={styles.mineralPriceTitle}>&nbsp;</div>
-                    <div className={styles.mineralPriceContent}>&nbsp;</div>
-                  </div>
                 </div>
               </div>
             ))

@@ -2,8 +2,29 @@
 
 .exploreMinerals {
   color: $color-navyblue;
-  font-size: 40px;
-  padding: 60px 0 120px 84px;
+  font-size: 60px;
+  padding: 60px 0 20px 84px;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: $color-navyblue;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    }
+    &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    }
 }
 
 img {
@@ -36,6 +57,11 @@ img {
 
 .allMinerals {
   display: inline-flex;
+  margin-top: 80px;
+  .mineralNameContent {
+    font-size: 24px;
+    text-align: center;
+  }
 }
 
 .allProductsToChoose {
@@ -44,6 +70,7 @@ img {
 
 .allProducts {
   display: block;
+  margin-top: 60px;
 }
 
 .product {
@@ -60,12 +87,12 @@ img {
 }
 
 .photoInsideMaterial img {
-  width: 200px;
+  width: 300px;
   border: solid 1px $color-dark;
   padding: 1px;
-  height: 200px;
+  height: 520px;
   object-fit: cover;
-  margin: 0 0 20px 48px;
+  margin: 0 0 20px 92px;
 }
 
 .mineralPriceContent {
