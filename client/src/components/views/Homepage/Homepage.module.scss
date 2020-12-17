@@ -17,21 +17,21 @@
 }
 
 .title {
-  top: -70vh;
+  top: -80vh;
   color: $color-light;
   opacity: 0.8;
   text-shadow: $color-lightblue 0 0 10px, $color-dark 0 -1px 80px,
     $color-dark 5px -5px 2px, $color-navyblue 0 30px 25px;
   text-align: center;
   font-family: $font-title;
-  font-size: 132px;
+  font-size: 100px;
   font-weight: bold;
   letter-spacing: 16px;
   z-index: 1;
   position: relative;
   
   i {
-    font-size: 116px;
+    font-size: 88px;
     transition: text-shadow 0.3s ease-in-out;
   &:hover {
     text-shadow: $color-lightblue 0 0 10px, $color-light 0 0 10px,
@@ -41,7 +41,7 @@
 }
 
 .subtitle {
-  opacity: 0.7;
+  opacity: 0.8;
   text-shadow: 1px 1px 6px $color-light, 0 0 25px $color-blue,
     0 0 25px $color-light;
   font-family: $font-text;
@@ -51,36 +51,38 @@
 
 .posts {
   font-size: 24px;
-  padding: 80px 0;
+  padding: 40px 0 80px 0;
   background: $color-lightblue;
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////// Media query 
 
 @media (max-width: 767px) {
   //sm
 
-  // .allHomepage {
-  //   padding-top: 360px;
-  // }
+  .title {
+  margin-top: 40px;
+  font-size: 32px;
+    i {
+      font-size: 32px;
+    }
+  }
 
-  // .title {
-  // font-size: 48px;
-  // margin-top: -400px;
-  // }
+  .subtitle {
+    font-size: 24px;
+    letter-spacing: 8px;
+    margin-top: 160px;
+  }
 
-  // .subtitle {
-  //   font-size: 22px;
-  //   margin-top: 80px;
-  //   letter-spacing: 8px;
-  //   font-weight: bold;
-  //   i {
-  //     font-size: 24px;
-  //     padding: 0 0 0 8px;
-  //   }
-  // }
+  .allHomepage {
+    background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
+  }
 
-  // .allHomepage {
-  //   background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
-  // }
+  .posts {
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    background: $color-lightblue;
+  }
 }
 
 @media (max-width: 411px) {

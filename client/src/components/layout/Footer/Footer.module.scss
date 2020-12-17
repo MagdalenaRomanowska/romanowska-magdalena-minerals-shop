@@ -1,0 +1,86 @@
+@import "../../../styles/settings.scss";
+
+.root {
+max-width: 100%;
+height: 16vh;
+background: $color-lightblue;
+overflow: hidden;
+position: relative;
+}
+
+.allLinks {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.links {
+  color: $color-navyblue;
+  padding: 0 24px 0 24px;
+  font-family: $font-text;
+  transition: text-shadow 0.3s ease-in-out;
+    &:hover {
+      color: $color-navyblue;
+      text-decoration: none;
+      text-shadow: $color-lightblue 0 0 40px, $color-navyblue 0 0 80px, $color-navyblue 0 0 20px;
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////// Media query 
+
+@media (max-width: 767px) { //sm
+  .allLinks {
+    font-size: 20px;
+    position: absolute;
+  top: 50%;
+  left: 25%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+
+  .waveEffectDiv {
+    display: none;
+  }
+}
+
+// @media (max-width: 411px) { // pixel 2 xl
+//   .allLinks {
+//     padding: 0 48px 0 0;
+//   }
+// }
+
+// @media (max-width: 568px) { // sm poziom
+//   .allLinks {
+//     padding: 0 160px 0 0;
+//   }
+
+//   .links {
+//     padding: 0 12px;
+//   }
+
+//   .main {
+//     background-size: 200% 200%;
+//   }
+
+//   .line {
+//     width: 75%;
+//   }
+// }
+
+// @media (max-width: 768px) {   //iPad
+ 
+  
+// }
+
+// @media (max-width: 992px) { //lg
+  
+  
+// }
+
+// @media (max-width: 1200px) { //xl
+  
+  
+// }

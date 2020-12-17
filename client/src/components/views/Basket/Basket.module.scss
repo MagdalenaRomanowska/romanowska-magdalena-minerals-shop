@@ -13,9 +13,9 @@
   width: 18%;
   background-image: linear-gradient(
     to right,
-    $color-light,
+    $color-lightblue,
     $color-dark,
-    $color-light
+    $color-lightblue
   );
 }
 
@@ -130,3 +130,6 @@
     font-weight: bold;
   }
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////// Media query 

@@ -2,7 +2,7 @@
 
 .main {
   font-family: $font-text;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .background {
@@ -13,7 +13,6 @@
 
 .postDetail {
   display: inline-flex;
-  width: 260px;
   padding-top: 18px;
 }
 
@@ -22,24 +21,24 @@
 }
 
 .detailTitle {
-  font-size: 72px;
+  font-size: 44px;
   color: $color-important;
   text-align: center;
-  padding: 120px 0 72px 0;
+  padding: 160px 0 72px 0;
   &:hover {
     color: $color-navyblue;
   }
 }
 
 .detailText {
-  font-size: 26px;
+  font-size: 18px;
   color: $color-navyblue;
   text-align: center;
-  padding: 0 48px 60px 72px;
+  padding: 0 48px 120px 72px;
 }
 
 .photoDescription {
-  font-size: 48px;
+  font-size: 32px;
   color: $color-navyblue;
   text-align: center;
   padding: 0 0 60px 0;
@@ -50,10 +49,10 @@
 }
 
 .photoDescription2 {
-  font-size: 48px;
+  font-size: 32px;
   color: $color-navyblue;
   text-align: center;
-  padding: 80px 0 32px 0;
+  padding: 120px 0 60px 0;
   letter-spacing: 6px;
   &:hover {
     color: $color-important;
@@ -62,11 +61,13 @@
 
 .detailPhoto {
   display: inline-flex;
-  margin-left: 240px;
+  left: 0%;
+  transform: translate(21%);
   color: $color-navyblue;
   img {
-    margin: 0 80px;
-    width: 300px;
+    margin: 0 120px;
+    width: 200px;
+    object-fit: cover;
     &:hover {
       transform: scale(1.2);
       box-shadow: 0 0px 10px $color-importantDark;
@@ -74,6 +75,7 @@
   }
   h2 {
     padding: 32px 0 24px 0;
+    font-size: 24px;
     text-align: center;
   }
 }
@@ -83,11 +85,10 @@
 }
 
 .selectQuantity {
-  font-size: 20px;
-  padding: 48px 0 0 0;
+  font-size: 16px;
+  padding: 60px 0 0 0;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .plusAndMinus {
@@ -115,8 +116,8 @@
 }
 
 .addToChartContainer {
-  width: 35%;
-  margin-left: 148px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .addToChart {
@@ -149,10 +150,12 @@
 }
 
 .goToBasket {
+  margin-top: 60px;
   position: absolute; 
-  top: 50%; left: 
-  50%; transform: translate(-50%, -50%);
-  margin-left: -32px;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-size: 40px;
   background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
 	background-size: 200% 200%;
 	animation: gradient 8s ease infinite;
@@ -290,4 +293,112 @@
     transform: translateY(-1800px) rotate(720deg);
     opacity: 0;
   }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////// Media query 
+
+@media (max-width: 767px) {
+  //sm
+  .detailTitle {
+    font-size: 24px;
+    padding: 40px 0 32px 0;
+  }
+  
+  .detailText {
+    font-size: 14px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 0 12px 32px 12px;
+  }
+
+  .photoDescription, .photoDescription2 {
+    font-size: 16px;
+    padding: 20px 8px;
+    letter-spacing: 3px;
+  }
+
+  .detailPhoto {
+    display: block;
+    transform: translate(25%);
+    img {
+      margin: 16px;
+      width: 160px;
+    }
+    h2 {
+      padding: 12px 0 8px 0;
+      font-size: 20px;
+    }
+  }
+  
+  .postDetailPrice {
+    text-align: center;
+  }
+  
+  .selectQuantity {
+    font-size: 16px;
+    padding: 16px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+    
+  .totalPrice {
+    margin: 0 0 8px 0;
+  }
+    
+  .amount {
+    margin: 0 8px;
+    color: $color-navyblue;
+    background-color: $color-light;
+    height: 24px;
+    width: 24px;
+    border: solid 1px $color-navyblue;
+  }
+  
+  .basketContainer {
+    position: relative;
+    height: 140px;
+  }
+  
+  .goToBasket {
+    margin-top: 60px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+    padding: 20px 48px;
+    color: $color-light;
+    border: solid 1px black;
+    text-transform: uppercase;
+      &:hover {
+        text-decoration: none;
+        color: $color-light;
+        font-weight: bold;
+        box-shadow: 0 0px 10px $color-navyblue;
+      }
+  }
+  
+}
+
+@media (max-width: 411px) {
+  // pixel 2 xl
+}
+
+@media (max-width: 568px) {
+  // sm poziom
+}
+
+@media (max-width: 768px) {
+  //iPad
+}
+
+@media (max-width: 992px) {
+  //lg
+}
+
+@media (max-width: 1200px) {
+  //xl
 }
