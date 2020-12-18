@@ -29,10 +29,10 @@ const MineralPost = ({ post }) => (
           <img src={post ? post.photo2 : ''} alt={'mineralPhoto2'} />
           <img src={post ? post.photo3 : ''} alt={'mineralPhoto3'} />
         </div>
-        <div className={styles.photoDescription2}>
+        {/* <div className={styles.photoDescription2}>
           {post ? post.photoDescription2 : ''}
-        </div>
-        <div className={styles.detailPhoto}>
+        </div> */}
+        {/* <div className={styles.detailPhoto}>
           <div>
             <img src={post ? post.photoBracelet : ''} alt={'photoBracelet'} />
             <h2>Bracelet</h2>
@@ -99,10 +99,10 @@ const MineralPost = ({ post }) => (
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles.basketContainer}>
-          <Link to={`/basket`} className={styles.goToBasket}>
-            Go to basket
+        </div> */}
+        <div className={styles.homepageContainer}>
+          <Link to={`/`} className={styles.backToHomepage}>
+            Back to Homepage
           </Link>
         </div>
       </div>

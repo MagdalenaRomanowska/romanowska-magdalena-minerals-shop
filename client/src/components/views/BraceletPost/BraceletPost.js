@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./MineralsList.module.scss";
+import styles from "./BraceletPost.module.scss";
 import { Link } from "react-router-dom";
 
-class MineralsList extends React.Component {
+class BraceletPost extends React.Component {
   componentDidMount() {
     const { loadMinerals } = this.props;
     loadMinerals();
@@ -286,9 +286,9 @@ class MineralsList extends React.Component {
   }
 }
 
-MineralsList.propTypes = {
+BraceletPost.propTypes = {
   posts: PropTypes.any,
   title: PropTypes.any,
 };
 
-export default MineralsList;
+export default BraceletPost;
