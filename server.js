@@ -17,12 +17,14 @@ const server = app.listen(process.env.PORT || 8000, () => {
 });
 
 const mineralsRoutes = require('./routes/minerals.routes');
+const productsRoutes = require('./routes/products.routes');
 
 app.use(cors()); 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); 
 
 app.use('/api', mineralsRoutes); 
+app.use('/api', productsRoutes); 
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '/client/build')));

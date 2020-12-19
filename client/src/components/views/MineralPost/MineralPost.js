@@ -3,31 +3,31 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './MineralPost.module.scss';
 
-const MineralPost = ({ post }) => (
+const MineralPost = ({ mineral }) => (
   <div className={styles.main}>
     <div className={styles.background}>
       <ul className={styles.squares}>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
+        <li><i className={"far fa-gem"}></i></li>
       </ul>
       <div className={styles.postContent}>
-        <div className={styles.detailTitle}><i className={'far fa-gem'}></i> &nbsp; {post ? post.title : ''}  &nbsp; <i className={'far fa-gem'}></i></div>
-        <div className={styles.detailText}>{post ? post.text : ''}</div>
+        <div className={styles.detailTitle}><i className={'far fa-gem'}></i> &nbsp; {mineral ? mineral.title : ''}  &nbsp; <i className={'far fa-gem'}></i></div>
+        <div className={styles.detailText}>{mineral ? mineral.text : ''}</div>
         <div className={styles.photoDescription}>
-          {post ? post.photoDescription : ''}
+          {mineral ? mineral.photoDescription : ''}
         </div>
         <div className={styles.detailPhoto}>
-          <img src={post ? post.photo : ''} alt={'mineralPhoto'} />
-          <img src={post ? post.photo2 : ''} alt={'mineralPhoto2'} />
-          <img src={post ? post.photo3 : ''} alt={'mineralPhoto3'} />
+          <img src={mineral ? mineral.photo : ''} alt={'mineralPhoto'} />
+          <img src={mineral ? mineral.photo2 : ''} alt={'mineralPhoto2'} />
+          <img src={mineral ? mineral.photo3 : ''} alt={'mineralPhoto3'} />
         </div>
         {/* <div className={styles.photoDescription2}>
           {post ? post.photoDescription2 : ''}
@@ -111,7 +111,7 @@ const MineralPost = ({ post }) => (
 );
 
 MineralPost.propTypes = {
-  post: PropTypes.any,
+  mineral: PropTypes.any,
 };
 
 export default MineralPost;

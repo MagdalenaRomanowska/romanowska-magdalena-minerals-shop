@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MineralsList from '../MineralsList/MineralsListContainer';
+import ProductsList from '../ProductsList/ProductsListContainer';
 import clsx from 'clsx';
 import styles from './Homepage.module.scss';
 
@@ -16,7 +16,7 @@ const Homepage = ({ className }) => (
       </div>
     </div>
     <div className={styles.posts}>
-      <MineralsList />
+      <ProductsList />
     </div>
   </div>
 );

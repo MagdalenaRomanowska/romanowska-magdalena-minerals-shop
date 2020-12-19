@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../Header/HeaderContainer';
-import Footer from '../Footer/FooterContainer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import clsx from 'clsx'; //narzędzie do używania wielu klas. Dowolna ilość.
 import styles from './MainLayout.module.scss';
 

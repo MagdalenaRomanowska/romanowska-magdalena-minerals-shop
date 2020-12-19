@@ -3,13 +3,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createMuiTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
-import { store } from './redux/store';
+import store from './redux/store';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import MineralPost from './components/views/MineralPost/MineralPostContainer';
-import BraceletPost from './components/views/BraceletPost/BraceletPostContainer';
-import Basket from './components/views/Basket/BasketContainer';
-import MyOrder from './components/views/MyOrder/MyOrderContainer';
+import Product from './components/views/Product/ProductContainer';
+import Basket from './components/views/Basket/Basket';
+import MyOrder from './components/views/MyOrder/MyOrder';
 import NotFound from './components/views/NotFound/NotFound';
 
 const theme = createMuiTheme({
@@ -30,7 +30,7 @@ const App = () => (
               <Route exact path='/basket' component={Basket} />
               <Route exact path='/myOrder' component={MyOrder} />
               <Route exact path='/minerals/:id' component={MineralPost} />
-              <Route exact path='/bracelet/:id' component={BraceletPost} />
+              <Route exact path='/product/:id' component={Product} />
               <Route path='*' component={NotFound} />
             </Switch>
           </MainLayout>

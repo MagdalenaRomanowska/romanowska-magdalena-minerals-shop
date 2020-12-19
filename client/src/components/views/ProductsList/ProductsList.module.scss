@@ -1,0 +1,428 @@
+@import "../../../styles/settings.scss";
+
+.exploreMinerals {
+  color: $color-navyblue;
+  font-size: 60px;
+  padding: 60px 0 20px 84px;
+  text-align: center;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: $color-navyblue;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    }
+    &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    }
+}
+
+img {
+  width: 330px;
+  border: solid 1px $color-dark;
+  padding: 1px;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.photoInside {
+  margin: 0 48px 20px 48px;
+  transition: box-shadow 0.4s ease-in-out;
+  &:hover img {
+    box-shadow: 0 0px 10px $color-navyblue;
+  }
+}
+
+.mineralText {
+  margin: 12px 0 0 48px;
+}
+
+.empty {
+  height: 120px;
+}
+
+.allMinerals {
+  display: inline-flex;
+  margin-top: 80px;
+  .mineralNameContent {
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    bottom: 0;
+    left: 25%;
+    background-color: $color-navyblue;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    }
+    &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    }
+  }
+}
+
+.allProductsToChoose {
+  display: inline-flex;
+}
+
+.allProducts {
+  display: inline-flex;
+  margin-top: 60px;
+}
+
+.product {
+  color: $color-darkblue;
+  font-size: 16px;
+  display: block;
+  font-family: $font-text;
+  margin-left: 40px;
+  margin-bottom: 48px;
+  &:hover {
+    text-decoration: none;
+    color: $color-darkblue;
+  }
+}
+
+.photoInsideMaterial img {
+  width: 380px;
+  border: solid 2px $color-dark;
+  padding: 2px;
+  height: 520px;
+  object-fit: cover;
+  margin: 0 0 20px 32px;
+  &:hover{
+    animation: pulse 1s infinite;
+    animation-timing-function: linear;   
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+}
+
+.mineralPriceContent {
+  color: $color-important;
+}
+
+.squares {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.squares li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  animation: animate 25s linear infinite;
+  animation-delay: -2.5s;
+  bottom: 10px;
+}
+
+.squares li:nth-child(1) {
+  left: 7%;
+  animation-duration: 15s;
+  color: $color-important;
+}
+
+.squares li:nth-child(2) {
+  left: 8%;
+  animation-duration: 19s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(3) {
+  left: 9%;
+  animation-duration: 23s;
+  color: $color-lightblue;
+}
+
+.squares li:nth-child(4) {
+  left: 10%;
+  animation-duration: 27s;
+  color: $color-important;
+}
+
+.squares li:nth-child(5) {
+  left: 11%;
+  animation-duration: 31s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(6) {
+  left: 12%;
+  animation-duration: 17s;
+  color: $color-importantDark;
+}
+
+.squares li:nth-child(7) {
+  left: 13%;
+  animation-duration: 21s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(8) {
+  left: 14%;
+  animation-duration: 25s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(9) {
+  left: 15%;
+  animation-duration: 26s;
+  color: $color-importantDark;
+}
+
+.squares li:nth-child(10) {
+  left: 16%;
+  animation-duration: 16s;
+  color: $color-blue;
+}
+
+.squares li:nth-child(11) {
+  left: 17%;
+  animation-duration: 18s;
+  color: $color-lightblue;
+}
+
+.squares li:nth-child(12) {
+  left: 18%;
+  animation-duration: 22s;
+  color: $color-blue;
+}
+
+.squares li:nth-child(13) {
+  left: 19%;
+  animation-duration: 26s;
+  color: $color-important;
+}
+
+.squares li:nth-child(14) {
+  left: 20%;
+  animation-duration: 24s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(15) {
+  left: 21%;
+  animation-duration: 20s;
+  color: $color-blue;
+}
+
+.squares li:nth-child(16) {
+  left: 22%;
+  animation-duration: 13.5s;
+  color: $color-importantDark;
+}
+
+.squares li:nth-child(17) {
+  left: 77%;
+  animation-duration: 14.5s;
+  color: $color-lightblue;
+}
+
+.squares li:nth-child(18) {
+  left: 78%;
+  animation-duration: 21s;
+  color: $color-blue;
+}
+
+.squares li:nth-child(19) {
+  left: 79%;
+  animation-duration: 20s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(20) {
+  left: 80%;
+  animation-duration: 15s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(21) {
+  left: 81%;
+  animation-duration: 18s;
+  color: $color-important;
+}
+
+.squares li:nth-child(22) {
+  left: 82%;
+  animation-duration: 21s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(23) {
+  left: 83%;
+  animation-duration: 26s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(24) {
+  left: 84%;
+  animation-duration: 22s;
+  color: $color-blue;
+}
+
+.squares li:nth-child(25) {
+  left: 85%;
+  animation-duration: 23s;
+  color: $color-importantDark;
+}
+
+.squares li:nth-child(26) {
+  left: 86%;
+  animation-duration: 19s;
+  color: $color-blue;
+}
+
+.squares li:nth-child(27) {
+  left: 87%;
+  animation-duration: 20s;
+  color: $color-lighterblue;
+}
+
+.squares li:nth-child(28) {
+  left: 88%;
+  animation-duration: 24s;
+  color: $color-lightblue;
+}
+
+.squares li:nth-child(29) {
+  left: 89%;
+  animation-duration: 27s;
+  color: $color-important;
+}
+
+.squares li:nth-child(30) {
+  left: 90%;
+  animation-duration: 22s;
+  color: $color-important;
+}
+
+.squares li:nth-child(31) {
+  left: 91%;
+  animation-duration: 17s;
+  color: $color-importantDark;
+}
+
+.squares li:nth-child(32) {
+  left: 92%;
+  animation-duration: 14s;
+  color: $color-importantDark;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-100vh) rotate(720deg);
+    opacity: 0.9;
+    border-radius: 0;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////// Media query
+
+@media (max-width: 767px) {
+  //sm
+  .squares li {
+    font-size: 12px;
+  }
+
+  .exploreMinerals {
+    color: $color-navyblue;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0 60px 0;
+  }
+
+  img {
+    width: 140px;
+    border: solid 1px $color-dark;
+    padding: 1px;
+    height: 130px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .photoInside {
+    margin: 0 8px 40px 48px;
+    transition: box-shadow 0.4s ease-in-out;
+    &:hover img {
+      box-shadow: 0 0px 10px $color-navyblue;
+    }
+  }
+
+  .mineralText {
+    margin: 12px 0 0 8px;
+  }
+
+  .allProducts {
+    display: block;
+  }
+
+  .product {
+    color: $color-darkblue;
+    font-size: 16px;
+    display: inline-flex;
+    font-family: $font-text;
+    margin-bottom: 28px;
+    &:hover {
+      text-decoration: none;
+      color: $color-darkblue;
+    }
+  }
+}
+
+@media (max-width: 411px) {
+  // pixel 2 xl
+}
+
+@media (max-width: 568px) {
+  // sm poziom
+}
+
+@media (max-width: 768px) {
+  //iPad
+}
+
+@media (max-width: 992px) {
+  //lg
+}
+
+@media (max-width: 1200px) {
+  //xl
+}

@@ -1,9 +1,9 @@
 import {connect} from 'react-redux';
 import MineralPost from './MineralPost';
-import {getPost} from '../../../redux/postsRedux';
+import {getMineral} from '../../../redux/mineralsRedux';
 
 const mapStateToProps = (state, props) => ({
-  post: getPost(state, props.match.params.id),
+  mineral: getMineral(state, props.match.params.id),
 });
 
 export default connect(mapStateToProps)(MineralPost);
