@@ -104,66 +104,6 @@
   text-align: center;
 }
 
-.selectQuantity {
-  font-size: 16px;
-  padding: 60px 0 0 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.plusAndMinus {
-  font-size: 16px;
-  display: inline-flex;
-  padding: 12px 0 0 0;
-  margin-bottom: 12px;
-}
-
-.minus, .plus {
-  margin: 0 8px;
-  color: $color-light;
-  background-color: $color-navyblue;
-  height: 24px;
-  width: 24px;
-  border-radius: 15%;
-  &:hover {
-    box-shadow: 0 0px 10px $color-navyblue;
-  }
-}
-
-.totalPrice {
-  margin: 0 0 16px 0;
-  font-size: 16px;
-}
-
-.addToChartContainer {
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.addToChart {
-  color: $color-navyblue;
-  background-color: $color-light;
-  border: solid 1px $color-navyblue;
-  padding: 8px 12px;
-  border-radius: 3%;
-  font-size: 16px;
-  transition: box-shadow 0.2s ease-in-out;
-    &:hover {
-      text-decoration: none;
-      color: $color-navyblue;
-      box-shadow: 0 0px 10px $color-navyblue;
-    }
-}
-
-.amount {
-  margin: 0 8px;
-  color: $color-navyblue;
-  background-color: $color-light;
-  height: 24px;
-  width: 24px;
-  border: solid 1px $color-navyblue;
-}
-
 .homepageContainer {
   position: relative;
   height: 140px;

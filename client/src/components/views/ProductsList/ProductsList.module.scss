@@ -84,12 +84,9 @@ img {
   }
 }
 
-.allProductsToChoose {
-  display: inline-flex;
-}
-
 .allProducts {
   display: inline-flex;
+  flex-wrap: wrap;
   margin-top: 60px;
 }
 

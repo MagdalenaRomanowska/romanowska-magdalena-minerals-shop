@@ -13,8 +13,6 @@ class ProductsList extends React.Component {
   render() {
     const { minerals, products } = this.props;
 
- //   if (true)
- //     return (<div></div>)
     return (
       <div className={styles.productDescription}>
         <div className={styles.squaresLeftSided}>
@@ -121,7 +119,8 @@ class ProductsList extends React.Component {
           Our Products
         </div>
         <div className={styles.allProductsToChoose}>
-          <div className={"col-sm-6 col-lg-6"}>
+         
+          <div className={styles.allProducts}>
             {products !== undefined && products.length ? (
               products.map((product) => (
                 <div className={styles.product} key={product.addressProduct}>
@@ -157,6 +156,7 @@ class ProductsList extends React.Component {
               <p>Sorry, no results found.</p>
             )}
           </div>
+          
         </div>
         <div className={styles.exploreMinerals}>
           Explore Our Minerals Used In Jewelry Production

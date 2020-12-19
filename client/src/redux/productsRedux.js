@@ -25,8 +25,8 @@ export const getProducts = ({ products }) => {
   return products;
 };
 
-export const getProduct = ({ products }, productTitle) => {
-  const filtered = products.filter((product) => product.addressProduct === productTitle);
+export const getProduct = ({ products }, productAddressProduct) => {
+  const filtered = products.filter((product) => product.addressProduct === productAddressProduct);
   return filtered.length ? filtered[0] : { error: true };
 };
 
