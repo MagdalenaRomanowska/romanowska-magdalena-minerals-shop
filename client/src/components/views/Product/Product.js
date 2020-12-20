@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./Product.module.scss";
+import { Link } from "react-router-dom";
 
 class Product extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      clicks: 0,
+      show: true,
+    };
+  }
+
+  IncrementItem = () => {
+    this.setState({ clicks: this.state.clicks + 1 });
+  }
+  DecreaseItem = () => {
+    this.setState({ clicks: this.state.clicks - 1 });
+  }
+  ToggleClick = () => {
+    this.setState({ show: !this.state.show });
+  }
+
   render() {
     const { product } = this.props;
 
@@ -130,17 +149,29 @@ class Product extends React.Component {
         <div className={styles.selectQuantity}>
           <div>Select quantity</div>
           <div className={styles.plusAndMinus}>
-            <div className={styles.minus}>-</div>
-            <div className={styles.amount}>1</div>
-            <div className={styles.plus}>+</div>
+            <div>
+              <button onClick={this.IncrementItem}>
+                +
+              </button>
+              <button onClick={this.DecreaseItem}>
+                -
+              </button>
+              <button onClick={this.ToggleClick}>
+                {this.state.show ? "Hide number" : "Show number"}
+              </button>
+              {this.state.show ? <h2>{this.state.clicks}</h2> : ""}
+            </div>
           </div>
           <div className={styles.totalPrice}>
             <div className={styles.total}>Total price:</div>
             <div className={styles.totalBox}></div>
           </div>
-          <div className={styles.addToChartContainer}>
-            <p className={styles.addToChart}>Add to cart</p>
+          <div className={styles.addToCartContainer}>
+            <p className={styles.addToCart}>Add to cart</p>
           </div>
+          <Link to={"/basket"} className={styles.goToBasket}>
+            Go &nbsp;to &nbsp;basket
+          </Link>
         </div>
       </div>
     );

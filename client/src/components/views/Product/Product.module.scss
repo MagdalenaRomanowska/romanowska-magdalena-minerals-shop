@@ -22,14 +22,14 @@
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    }
-    &:hover:before {
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  }
+  &:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-    }
+  }
 }
 
 .textProduct {
@@ -50,14 +50,14 @@
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    }
-    &:hover:before {
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  }
+  &:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-    }
+  }
 }
 
 .productDetailPhotos {
@@ -65,7 +65,7 @@
   padding: 0 0 48px 0;
 }
 
-.productDetailPhotos img{
+.productDetailPhotos img {
   width: 300px;
   height: 300px;
   margin: 0 166px;
@@ -75,7 +75,7 @@
 .selectQuantity {
   font-size: 32px;
   color: $color-navyblue;
-  padding: 60px 0 0 0;
+  padding: 80px 0 60px 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -87,7 +87,8 @@
   margin-bottom: 12px;
 }
 
-.minus, .plus {
+.minus,
+.plus {
   margin: 0 8px;
   color: $color-light;
   background-color: $color-navyblue;
@@ -104,40 +105,74 @@
   font-size: 24px;
 }
 
-.addToChartContainer {
+.addToCartContainer {
   width: fit-content;
   margin: 0 auto;
 }
 
-.addToChart {
+.addToCart {
   color: $color-navyblue;
   background-color: $color-light;
   border: solid 1px $color-navyblue;
   padding: 8px 12px;
+  margin: 0 0 80px 0;
   border-radius: 3%;
   font-size: 24px;
   transition: box-shadow 0.2s ease-in-out;
-    &:hover {
-      text-decoration: none;
-      color: $color-navyblue;
-      box-shadow: 0 0px 10px $color-navyblue;
-    }
+  &:hover {
+    text-decoration: none;
+    color: $color-navyblue;
+    box-shadow: 0 0px 10px $color-navyblue;
+  }
 }
 
 .amount {
   margin: 0 8px;
   color: $color-navyblue;
   background-color: $color-light;
-  height: 24px;
-  width: 24px;
+  height: 64px;
+  width: 64px;
   border: solid 1px $color-navyblue;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.goToBasket {
+  text-transform: uppercase;
+  background: linear-gradient(
+    -45deg,
+    $color-blue,
+    $color-importantDark,
+    $color-darkblue,
+    $color-importantDark,
+    $color-blue
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  padding: 20px 40px;
+  color: $color-light;
+  border: solid 1px black;
+  font-family: $font-text;
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    text-decoration: none;
+    color: $color-light;
+    box-shadow: 0 0px 20px $color-navyblue;
+    font-weight: bold;
+  }
 }
 
 .squares {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   overflow: hidden;
 }
 
@@ -157,145 +192,145 @@
 }
 
 .squares li:nth-child(2) {
-  left: 8%;
+  left: 9%;
   animation-duration: 19s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(3) {
-  left: 9%;
+  left: 12%;
   animation-duration: 23s;
   color: $color-lightblue;
 }
 
 .squares li:nth-child(4) {
-  left: 10%;
+  left: 14%;
   animation-duration: 27s;
   color: $color-important;
 }
 
 .squares li:nth-child(5) {
-  left: 11%;
+  left: 17%;
   animation-duration: 31s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(6) {
-  left: 12%;
+  left: 19%;
   animation-duration: 17s;
   color: $color-importantDark;
 }
 
 .squares li:nth-child(7) {
-  left: 13%;
+  left: 22%;
   animation-duration: 21s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(8) {
-  left: 14%;
+  left: 24%;
   animation-duration: 25s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(9) {
-  left: 15%;
+  left: 27%;
   animation-duration: 26s;
   color: $color-importantDark;
 }
 
 .squares li:nth-child(10) {
-  left: 16%;
+  left: 29%;
   animation-duration: 16s;
   color: $color-blue;
 }
 
 .squares li:nth-child(11) {
-  left: 17%;
+  left: 32%;
   animation-duration: 18s;
   color: $color-lightblue;
 }
 
 .squares li:nth-child(12) {
-  left: 18%;
+  left: 34%;
   animation-duration: 22s;
   color: $color-blue;
 }
 
 .squares li:nth-child(13) {
-  left: 19%;
+  left: 37%;
   animation-duration: 26s;
   color: $color-important;
 }
 
 .squares li:nth-child(14) {
-  left: 20%;
+  left: 39%;
   animation-duration: 24s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(15) {
-  left: 21%;
+  left: 42%;
   animation-duration: 20s;
   color: $color-blue;
 }
 
 .squares li:nth-child(16) {
-  left: 22%;
+  left: 45%;
   animation-duration: 13.5s;
   color: $color-importantDark;
 }
 
 .squares li:nth-child(17) {
-  left: 77%;
+  left: 47%;
   animation-duration: 14.5s;
   color: $color-lightblue;
 }
 
 .squares li:nth-child(18) {
-  left: 78%;
+  left: 51%;
   animation-duration: 21s;
   color: $color-blue;
 }
 
 .squares li:nth-child(19) {
-  left: 79%;
+  left: 55%;
   animation-duration: 20s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(20) {
-  left: 80%;
+  left: 60%;
   animation-duration: 15s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(21) {
-  left: 81%;
+  left: 64%;
   animation-duration: 18s;
   color: $color-important;
 }
 
 .squares li:nth-child(22) {
-  left: 82%;
+  left: 69%;
   animation-duration: 21s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(23) {
-  left: 83%;
+  left: 74%;
   animation-duration: 26s;
   color: $color-lighterblue;
 }
 
 .squares li:nth-child(24) {
-  left: 84%;
+  left: 78%;
   animation-duration: 22s;
   color: $color-blue;
 }
 
 .squares li:nth-child(25) {
-  left: 85%;
+  left: 82%;
   animation-duration: 23s;
   color: $color-importantDark;
 }
@@ -360,7 +395,6 @@
 
 @media (max-width: 767px) {
   //sm
-  
 }
 
 @media (max-width: 411px) {
