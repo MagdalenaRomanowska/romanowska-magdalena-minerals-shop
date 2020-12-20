@@ -2,10 +2,10 @@ import axios from "axios";
 import { API_URL } from "../config";
 
 /* selectors */
-export const getAll = ({ posts }) => posts.data;
+export const getAll = ({ products }) => products.data;
 
 /* action name creator */
-const reducerName = "posts";
+const reducerName = "products";
 const createActionName = (name) => `app/${reducerName}/${name}`;
 
 /* action types */

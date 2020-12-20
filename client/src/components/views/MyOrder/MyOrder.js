@@ -16,8 +16,8 @@ const MyOrder = ({ className }) => (
         <form className={styles.cartOrder}>
           <ul className={styles.orderedMinerals}>
             <li>
-              <div className={styles.chosenItems}>
-                <b>CHOSEN ITEMS</b>
+              <div className={styles.orderedItems}>
+                <b>ORDERED ITEMS</b>
               </div>
               <div className={styles.amountAll}>
                 <b>AMOUNT</b>
@@ -30,17 +30,11 @@ const MyOrder = ({ className }) => (
               </div>
             </li>
             <li>
-              <div className={styles.chosenItems}>Ammonite bracelet</div>
+              <div className={styles.orderedItems}>Ammonite bracelet</div>
               <div className={styles.amountAll}>1</div>
               <div className={styles.price}>xxx</div>
               <div className={styles.comment}>xyz</div>
-            </li>
-            <li>
-              <div className={styles.chosenItems}>Fluorite ring</div>
-              <div className={styles.amountAll}>1</div>
-              <div className={styles.price}>xxx</div>
-              <div className={styles.comment}>abcdef</div>
-            </li>
+            </li>            
           </ul>
           <div className={styles.line}></div>
           <ul className={styles.cartOrderPrice}>

@@ -8,7 +8,7 @@ import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import Homepage from './components/views/Homepage/Homepage';
 import Mineral from './components/views/Mineral/MineralContainer';
 import Product from './components/views/Product/ProductContainer';
-import Basket from './components/views/Basket/Basket';
+import Basket from './components/views/Basket/BasketContainer';
 import MyOrder from './components/views/MyOrder/MyOrder';
 import NotFound from './components/views/NotFound/NotFound';
 import ScrollToTopOfPage from './utils/ScrollToTopOfPage';

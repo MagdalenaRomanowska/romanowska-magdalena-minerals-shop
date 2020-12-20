@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Product.module.scss";
 import { Link } from "react-router-dom";
@@ -7,20 +7,20 @@ class Product extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicks: 0,
-      show: true,
+      clicks: 1,
     };
   }
 
   IncrementItem = () => {
     this.setState({ clicks: this.state.clicks + 1 });
-  }
+  };
   DecreaseItem = () => {
-    this.setState({ clicks: this.state.clicks - 1 });
-  }
-  ToggleClick = () => {
-    this.setState({ show: !this.state.show });
-  }
+    if (this.state.clicks > 1) {
+      this.setState({ clicks: this.state.clicks - 1 });
+    } else {
+      this.setState({ clicks: 1 });
+    }
+  };
 
   render() {
     const { product } = this.props;
@@ -146,24 +146,20 @@ class Product extends React.Component {
             className={"col-lg-4"}
           />
         </div>
+        <div className={styles.textProduct}>Price: {product.priceProduct} $</div>
         <div className={styles.selectQuantity}>
           <div>Select quantity</div>
           <div className={styles.plusAndMinus}>
-            <div>
-              <button onClick={this.IncrementItem}>
-                +
-              </button>
-              <button onClick={this.DecreaseItem}>
-                -
-              </button>
-              <button onClick={this.ToggleClick}>
-                {this.state.show ? "Hide number" : "Show number"}
-              </button>
-              {this.state.show ? <h2>{this.state.clicks}</h2> : ""}
-            </div>
+            <button onClick={this.DecreaseItem} className={styles.minus}>
+              -
+            </button>
+            <div className={styles.amount}>{this.state.clicks}</div>
+            <button onClick={this.IncrementItem} className={styles.plus}>
+              +
+            </button>
           </div>
           <div className={styles.totalPrice}>
-            <div className={styles.total}>Total price:</div>
+            <div className={styles.total}>Total price: {product.priceProduct * this.state.clicks} $</div>
             <div className={styles.totalBox}></div>
           </div>
           <div className={styles.addToCartContainer}>

@@ -145,7 +145,7 @@ class ProductsList extends React.Component {
                         Minimal price:
                       </div>
                       <div className={styles.mineralPriceContent}>
-                        {product.priceProduct}
+                        {product.priceProduct} $
                       </div>
                       <div className={styles.empty}></div>
                     </div>
