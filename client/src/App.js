@@ -11,6 +11,7 @@ import Product from './components/views/Product/ProductContainer';
 import Basket from './components/views/Basket/BasketContainer';
 import MyOrder from './components/views/MyOrder/MyOrder';
 import NotFound from './components/views/NotFound/NotFound';
+import OrderSent from './components/views/OrderSent/OrderSent';
 import ScrollToTopOfPage from './utils/ScrollToTopOfPage';
 
 const theme = createMuiTheme({
@@ -33,6 +34,7 @@ const App = () => (
               <Route exact path='/myOrder' component={MyOrder} />
               <Route exact path='/minerals/:id' component={Mineral} />
               <Route exact path='/product/:id' component={Product} />
+              <Route exact path='/orderSent' component={OrderSent} />
               <Route path='*' component={NotFound} />
             </Switch>
           </MainLayout>

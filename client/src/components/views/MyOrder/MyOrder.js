@@ -98,7 +98,7 @@ const MyOrder = ({ className }) => (
           </Row>
         </form>
       </div>
-      <Link to={'/'} className={styles.clickToOrder}>
+      <Link to={'/orderSent'} className={styles.clickToOrder}>
         Click &nbsp;to &nbsp;order
       </Link>
     </div>

@@ -15,7 +15,7 @@ const Homepage = ({ className }) => (
         <h4 className={styles.wordCarousel}>
           <div>
             <ul className={styles.flip4}>
-              <li>elegance</li>
+              <li>elegant gems</li>
               <li>timeless</li>
               <li>silver materials</li>
               <li>delightful</li>
