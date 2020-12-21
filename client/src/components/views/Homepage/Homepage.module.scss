@@ -29,14 +29,13 @@
   letter-spacing: 16px;
   z-index: 1;
   position: relative;
-  
   i {
     font-size: 88px;
     transition: text-shadow 0.3s ease-in-out;
-  &:hover {
-    text-shadow: $color-lightblue 0 0 10px, $color-light 0 0 10px,
-      $color-light 0 0 2px, $color-navyblue 0 0 5px;
-  }
+    &:hover {
+      text-shadow: $color-lightblue 0 0 10px, $color-light 0 0 10px,
+        $color-light 0 0 2px, $color-navyblue 0 0 5px;
+    }
   }
 }
 
@@ -59,14 +58,119 @@
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    }
-    &:hover:before {
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  }
+  &:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
+  }
+}
+
+.wordCarousel {
+  text-transform: uppercase;
+  div {
+    overflow: hidden;
+    height: 65px;
+    margin-top: 300px;
+    li {
+      height: 45px;
+      margin-bottom: 45px;
+      display: block;
     }
+  }
+}
+
+.flip2 {
+  animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+.flip3 {
+  animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+.flip4 {
+  animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip2 {
+  0% {
+    margin-top: -180px;
+  }
+  5% {
+    margin-top: -90px;
+  }
+  50% {
+    margin-top: -90px;
+  }
+  55% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@keyframes flip3 {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+@keyframes flip4 {
+  0% {
+    margin-top: -360px;
+  }
+  5% {
+    margin-top: -270px;
+  }
+  25% {
+    margin-top: -270px;
+  }
+  30% {
+    margin-top: -180px;
+  }
+  50% {
+    margin-top: -180px;
+  }
+  55% {
+    margin-top: -90px;
+  }
+  75% {
+    margin-top: -90px;
+  }
+  80% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
 }
 
 .posts {
@@ -75,14 +179,14 @@
   background: $color-lightblue;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////// Media query 
+//////////////////////////////////////////////////////////////////////////////////////////// Media query
 
 @media (max-width: 767px) {
   //sm
 
   .title {
-  margin-top: 40px;
-  font-size: 32px;
+    margin-top: 40px;
+    font-size: 32px;
     i {
       font-size: 32px;
     }

@@ -115,11 +115,19 @@ class ProductsList extends React.Component {
             </li>
           </ul>
         </div>
-        <div className={styles.exploreMinerals}>
-          Our Products
+        <div className={styles.sectionTitle}>
+          O<span className={styles.letter}></span> 
+          U<span className={styles.letter}></span> 
+          R<span className={styles.letter}></span> &nbsp; &nbsp;
+          P<span className={styles.letter}></span> 
+          R<span className={styles.letter}></span> 
+          O<span className={styles.letter}></span> 
+          D<span className={styles.letter}></span> 
+          U<span className={styles.letter}></span> 
+          C<span className={styles.letter}></span> 
+          T<span className={styles.letter}></span>S
         </div>
         <div className={styles.allProductsToChoose}>
-         
           <div className={styles.allProducts}>
             {products !== undefined && products.length ? (
               products.map((product) => (
@@ -133,18 +141,21 @@ class ProductsList extends React.Component {
                       src={product.photoProductHomepage}
                       alt={"PhotoProduct"}
                     />
+                    <p className={styles.clickToSeeDetails}>
+                      Click to see details
+                    </p>
                   </Link>
-                  <div className={styles.mineralText}>
-                    <div className={styles.mineralName}>
-                      <div className={styles.mineralNameContent}>
+                  <div className={styles.productText}>
+                    <div className={styles.productName}>
+                      <div className={styles.productNameContent}>
                         <b>{product.titleProduct}</b>
                       </div>
                     </div>
-                    <div className={styles.mineralPrice}>
-                      <div className={styles.mineralPriceTitle}>
+                    <div className={styles.productPrice}>
+                      <div className={styles.productPriceTitle}>
                         Minimal price:
                       </div>
-                      <div className={styles.mineralPriceContent}>
+                      <div className={styles.productPriceContent}>
                         {product.priceProduct} $
                       </div>
                       <div className={styles.empty}></div>
@@ -156,9 +167,8 @@ class ProductsList extends React.Component {
               <p>Sorry, no results found.</p>
             )}
           </div>
-          
         </div>
-        <div className={styles.exploreMinerals}>
+        <div className={styles.sectionTitle}>
           Explore Our Minerals Used In Jewelry Production
         </div>
         <div className={styles.allMinerals}>
@@ -171,10 +181,11 @@ class ProductsList extends React.Component {
                   className={styles.photoInsideMaterial}
                 >
                   <img src={mineral.photo} alt={"mineralPhoto"} />
+                  <p className={styles.clickToExplore}>Click to explore</p>
                 </Link>
-                <div className={styles.mineralText}>
-                  <div className={styles.mineralName}>
-                    <div className={styles.mineralNameContent}>
+                <div className={styles.productText}>
+                  <div className={styles.productName}>
+                    <div className={styles.productNameContent}>
                       <b>{mineral.title}</b>
                     </div>
                   </div>

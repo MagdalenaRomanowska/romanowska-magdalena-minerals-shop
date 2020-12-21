@@ -95,6 +95,8 @@
   height: 44px;
   width: 44px;
   border-radius: 15%;
+  position: relative;
+  z-index: 1;
   &:hover {
     box-shadow: 0 0px 10px $color-navyblue;
   }
@@ -111,6 +113,8 @@
 }
 
 .addToCart {
+  position: relative;
+  z-index: 1;
   color: $color-navyblue;
   background-color: $color-light;
   border: solid 1px $color-navyblue;
@@ -127,6 +131,8 @@
 }
 
 .amount {
+  position: relative;
+  z-index: 1;
   margin: 0 8px;
   color: $color-navyblue;
   background-color: $color-light;

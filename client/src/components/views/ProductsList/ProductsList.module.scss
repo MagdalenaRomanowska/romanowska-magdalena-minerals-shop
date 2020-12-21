@@ -1,9 +1,10 @@
 @import "../../../styles/settings.scss";
 
-.exploreMinerals {
+.sectionTitle {
   color: $color-navyblue;
   font-size: 60px;
-  padding: 60px 0 20px 84px;
+  padding: 60px 0 20px 0px;
+  font-weight: bold;
   text-align: center;
   position: relative;
   &:before {
@@ -17,14 +18,25 @@
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    }
-    &:hover:before {
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  }
+  &:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-    }
+  }
+}
+
+.letter{
+	display: inline-flex;
+	height: 30px;
+	width: 27px;
+	animation: letter 3s ease-in-out infinite alternate;
+}
+@keyframes letter {
+	0%,30%{ width: 27px; }
+	70%,100%{ width: 3vw; }
 }
 
 img {
@@ -40,46 +52,65 @@ img {
 }
 
 .photoInside {
-  margin: 0 48px 20px 48px;
+  margin: 0 56px 0 56px;
   transition: box-shadow 0.4s ease-in-out;
   &:hover img {
     box-shadow: 0 0px 10px $color-navyblue;
   }
+  &:hover .clickToSeeDetails {
+    opacity: 1;
+  }
 }
 
-.mineralText {
-  margin: 12px 0 0 48px;
+.clickToSeeDetails {
+  color: $color-light;
+  font-size: 24px;
+  text-decoration: none;
+  width: fit-content;
+  background-color: $color-darkblue;
+  padding: 4px 8px;
+  margin-bottom: -50px;
+  border: solid 1px $color-light;
+  position: relative;
+  z-index: 1;
+  top: -35%;
+  left: 25%;
+  opacity: 0;
+}
+
+.productText {
+  margin: 0 0 0 56px;
 }
 
 .empty {
-  height: 120px;
+  height: 90px;
 }
 
 .allMinerals {
   display: inline-flex;
   margin-top: 80px;
-  .mineralNameContent {
+  .productNameContent {
     font-size: 24px;
     text-align: center;
     position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 2px;
-    bottom: 0;
-    left: 25%;
-    background-color: $color-navyblue;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      bottom: 0;
+      left: 25%;
+      background-color: $color-navyblue;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+      transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
     }
     &:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
     }
   }
 }
@@ -87,7 +118,7 @@ img {
 .allProducts {
   display: inline-flex;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 120px;
 }
 
 .product {
@@ -110,18 +141,44 @@ img {
   height: 520px;
   object-fit: cover;
   margin: 0 0 20px 32px;
-  &:hover{
+  &:hover {
     animation: pulse 1s infinite;
-    animation-timing-function: linear;   
+    animation-timing-function: linear;
   }
   @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
 
-.mineralPriceContent {
+.photoInsideMaterial {
+  &:hover .clickToExplore {
+    opacity: 1;
+  }
+}
+
+.clickToExplore {
+  color: $color-light;
+  font-size: 24px;
+  width: fit-content;
+  background-color: $color-darkblue;
+  padding: 4px 8px;
+  border: solid 1px $color-light;
+  position: relative;
+  z-index: 1;
+  top: -50%;
+  left: 30%;
+  opacity: 0;
+}
+
+.productPriceContent {
   color: $color-important;
 }
 
@@ -383,7 +440,7 @@ img {
     }
   }
 
-  .mineralText {
+  .productText {
     margin: 12px 0 0 8px;
   }
 

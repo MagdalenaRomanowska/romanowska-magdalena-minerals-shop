@@ -59,7 +59,7 @@ const MyOrder = ({ className }) => (
           </ul>
         </form>
         <form className={styles.contactForm}>
-          <div className={styles.cartContentTitle}>Your contact data</div>
+          <div className={styles.yourContactData}>Your contact data</div>
           <Row>
             <Col lg={12}>
               <div className={styles.clientData}>

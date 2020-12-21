@@ -45,14 +45,29 @@
     visibility: hidden;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
-    }
-    &:hover:before {
+    -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+    transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  }
+  &:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-    }
+  }
+  background: linear-gradient(90deg, $color-lightblue, $color-navyblue, $color-lightblue);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 .orderedItems {
@@ -152,5 +167,4 @@
   }
 }
 
-
-//////////////////////////////////////////////////////////////////////////////////////////// Media query 
+//////////////////////////////////////////////////////////////////////////////////////////// Media query
