@@ -3,7 +3,7 @@ import { API_URL } from '../config';
 
 /* SELECTORS */
 export const getOrders = ({ orders }) => {
-    return orders.data;
+    return orders;
 };
 
 /* ACTIONS */
@@ -21,6 +21,12 @@ export const startRequest = payload => ({ payload, type: START_REQUEST });
 export const endRequest = payload => ({ payload, type: END_REQUEST });
 export const errorRequest = payload => ({ payload, type: ERROR_REQUEST });
 export const loadOrders = payload => ({ payload, type: LOAD_ORDERS });
+
+export const getOrder = ({orders}, orderId) => {
+  const filtered = orders.filter(order => order.id == orderId);
+  return filtered.length ? filtered[0] : {error: true};
+};
+
 
 /* THUNKS */
 

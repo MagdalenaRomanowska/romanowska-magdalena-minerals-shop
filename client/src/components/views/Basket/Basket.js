@@ -35,7 +35,7 @@ class Basket extends React.Component {
               <i className={"far fa-gem"}></i>
             </div>
             <form className={styles.cartOrder}>
-              <ul className={styles.orderedMinerals}>
+              <ul className={styles.orderedJewelry}>
                 <li>
                   <div className={styles.orderedItems}>
                     <b>ORDERED ITEMS</b>
@@ -51,42 +51,55 @@ class Basket extends React.Component {
                   </div>
                   <div className={styles.icons}></div>
                 </li>
-                <li>
-                  <div className={styles.orderedItems}>{orders.orderedItems}</div>
-                  <div className={styles.amountAll}>
-                    <div className={styles.plusAndMinus}>
-                      <button
-                        onClick={this.DecreaseItem}
-                        className={styles.minus}
-                      >
-                        -
-                      </button>
-                      <div className={styles.amount}>{this.state.clicks}</div>
-                      <button
-                        onClick={this.IncrementItem}
-                        className={styles.plus}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className={styles.price}>xxx</div>
-                  <div className={styles.comment}>
-                    <form>
-                      <input type="text" name="name" />
-                    </form>
-                  </div>
-                  <div className={styles.icons}>
-                    <i className={"fas fa-trash-alt"}></i>
-                  </div>
-                </li>
+                {orders !== undefined && orders.length ? (
+                  orders.map((order) => (
+                    <li>
+                      <div className={styles.orderedItems}>
+                        {order.orderedItems}
+                      </div>
+                      <div className={styles.amountAll}>
+                        <div className={styles.plusAndMinus}>
+                          <button
+                            onClick={this.DecreaseItem}
+                            className={styles.minus}
+                          >
+                            -
+                          </button>
+                          <div className={styles.amount}>{order.amountAll}</div>
+                          <button
+                            onClick={this.IncrementItem}
+                            className={styles.plus}
+                          >
+                            +
+                          </button>
+                        </div>
+                      </div>
+                      <div className={styles.price}>{order.price}</div>
+                      <div className={styles.comment}>
+                        <form>
+                          <input
+                            type="text"
+                            name="name"
+                            value={order.comment}
+                          />
+                        </form>
+                      </div>
+                      <div className={styles.icons}>
+                        <i className={"fas fa-trash-alt"}></i>
+                      </div>
+                    </li>
+                  ))
+                ) : (
+                  <p>Sorry, no results found.</p>
+                )}
               </ul>
               <div className={styles.line}></div>
               <ul className={styles.cartOrderPrice}>
+                
                 <li className={styles.cartOrderSubtotal}>
                   <span className={styles.cartOrderPriceName}>Subtotal:</span>
                   <span className={styles.cartOrderPriceSum}>
-                    $<strong>0</strong>
+                    $<strong></strong>
                   </span>
                 </li>
                 <li className={styles.cartOrderDelivery}>
