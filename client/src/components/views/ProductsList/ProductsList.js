@@ -169,12 +169,12 @@ class ProductsList extends React.Component {
           </div>
         </div>
         <div className={styles.sectionTitle}>
-          Explore Our Minerals Used In Jewelry Production
+          Explore our minerals used in jewelry production
         </div>
         <div className={styles.allMinerals}>
           {minerals.length ? (
             minerals.map((mineral) => (
-              <div className={styles.product} key={mineral.title}>
+              <div className={styles.mineral} key={mineral.title}>
                 <Link
                   key={mineral.title}
                   to={`/minerals/${mineral.title}`}
@@ -183,9 +183,9 @@ class ProductsList extends React.Component {
                   <img src={mineral.photo} alt={"mineralPhoto"} />
                   <p className={styles.clickToExplore}>Click to explore</p>
                 </Link>
-                <div className={styles.productText}>
-                  <div className={styles.productName}>
-                    <div className={styles.productNameContent}>
+                <div className={styles.mineralText}>
+                  <div className={styles.mineralName}>
+                    <div className={styles.mineralNameContent}>
                       <b>{mineral.title}</b>
                     </div>
                   </div>

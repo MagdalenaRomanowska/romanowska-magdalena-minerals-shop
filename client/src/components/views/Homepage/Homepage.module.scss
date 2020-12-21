@@ -185,21 +185,25 @@
   //sm
 
   .title {
-    margin-top: 40px;
-    font-size: 32px;
+    margin-top: 20px;
+    font-size: 30px;
     i {
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 
   .subtitle {
-    font-size: 24px;
+    font-size: 16px;
     letter-spacing: 8px;
-    margin-top: 160px;
+    margin-top: 100px;
   }
 
   .allHomepage {
     background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
+  }
+
+  .wordCarousel {
+    display: none;
   }
 
   .posts {
@@ -209,20 +213,31 @@
   }
 }
 
-@media (max-width: 411px) {
-  // pixel 2 xl
-}
-
-@media (max-width: 568px) {
-  // sm poziom
-}
-
-@media (max-width: 768px) {
-  //iPad
-}
-
 @media (max-width: 992px) {
   //lg
+  .title {
+    margin-top: 20px;
+    font-size: 30px;
+    i {
+      font-size: 30px;
+    }
+  }
+
+  .subtitle {
+    font-size: 16px;
+    letter-spacing: 8px;
+    margin-top: 100px;
+  }
+  
+  .allHomepage {
+    background-image: url("https://i.postimg.cc/02YKGnGt/geoda-Duza-Srodek.jpg");
+  }
+
+  .posts {
+    font-size: 24px;
+    padding: 0 0 20px 0;
+    background: $color-lightblue;
+  }
 }
 
 @media (max-width: 1200px) {

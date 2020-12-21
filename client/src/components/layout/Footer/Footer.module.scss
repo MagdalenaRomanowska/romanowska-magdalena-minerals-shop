@@ -19,7 +19,7 @@
 
 .links {
   color: $color-navyblue;
-  padding: 0 24px 0 24px;
+  //padding: 0 24px 0 24px;
   font-family: $font-text;
   &:hover {
     text-decoration: none;
@@ -55,7 +55,7 @@
     font-size: 20px;
     position: absolute;
     top: 50%;
-    left: 25%;
+    //left: 25%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
@@ -65,37 +65,20 @@
   }
 }
 
-// @media (max-width: 411px) { // pixel 2 xl
-//   .allLinks {
-//     padding: 0 48px 0 0;
-//   }
-// }
+@media (max-width: 992px) { //lg
+  .allLinks {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 
-// @media (max-width: 568px) { // sm poziom
-//   .allLinks {
-//     padding: 0 160px 0 0;
-//   }
-
-//   .links {
-//     padding: 0 12px;
-//   }
-
-//   .main {
-//     background-size: 200% 200%;
-//   }
-
-//   .line {
-//     width: 75%;
-//   }
-// }
-
-// @media (max-width: 768px) {   //iPad
-
-// }
-
-// @media (max-width: 992px) { //lg
-
-// }
+  .waveEffectDiv {
+    display: none;
+  }
+}
 
 // @media (max-width: 1200px) { //xl
 

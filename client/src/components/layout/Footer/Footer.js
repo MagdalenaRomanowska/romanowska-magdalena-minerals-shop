@@ -10,8 +10,8 @@ const Footer = ({ className }) => (
     <div className={styles.main}>
       <div className={styles.waveEffectDiv}><Wave className={styles.waveEffect}/></div>
       <div className={styles.allLinks}>
-        <Link to={`/`} className={styles.links}><i className={'fab fa-facebook-f'}></i></Link>
-        <Link to={`/`} className={styles.links}><i className={'fab fa-instagram'}></i></Link>
+        <Link to={`/`} className={styles.links}><i className={'fab fa-facebook-f'}></i></Link> &nbsp; &nbsp;
+        <Link to={`/`} className={styles.links}><i className={'fab fa-instagram'}></i></Link>  &nbsp; &nbsp;
         <Link to={`/`} className={styles.links}><i className={'fab fa-pinterest-p'}></i></Link>
       </div>
     </div>

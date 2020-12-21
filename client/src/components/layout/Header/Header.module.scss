@@ -94,49 +94,18 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////// Media query 
 
-@media (max-width: 767px) {
-  //sm
+@media (max-width: 992px) {
+  //lg
   .allLinks {
     font-size: 16px;    
   }
   .links {
     padding: 0 12px;
   }
+  .links i {
+    font-size: 14px;
+  }
 }
-
-// @media (max-width: 411px) {
-//   // pixel 2 xl
-//   .allLinks {
-//     padding: 0 48px 0 0;
-//   }
-// }
-
-// @media (max-width: 568px) {
-//   // sm poziom
-//   .allLinks {
-//     padding: 0 160px 0 0;
-//   }
-
-//   .links {
-//     padding: 0 12px;
-//   }
-
-//   .main {
-//     background-size: 200% 200%;
-//   }
-
-//   .line {
-//     width: 75%;
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   //iPad
-// }
-
-// @media (max-width: 992px) {
-//   //lg
-// }
 
 // @media (max-width: 1200px) {
 //   //xl
