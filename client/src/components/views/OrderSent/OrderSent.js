@@ -17,7 +17,7 @@ const OrderSent = ({ className }) => (
 
         <div className={styles.role}>
           <div className={styles.block}></div>
-          <p>Order has been sent</p>
+          <p>Your order has been sent</p>
         </div>
       </div>
     </div>

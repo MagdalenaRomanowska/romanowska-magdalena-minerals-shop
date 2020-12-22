@@ -15,10 +15,10 @@ const Homepage = ({ className }) => (
         <h4 className={styles.wordCarousel}>
           <div>
             <ul className={styles.flip4}>
-              <li>elegant gems</li>
-              <li>timeless</li>
+              <li>for every occasion</li>
+              <li>timeless gems</li>
               <li>silver materials</li>
-              <li>delightful</li>
+              <li>elegance</li>
             </ul>
           </div>
         </h4>

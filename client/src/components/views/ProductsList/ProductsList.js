@@ -116,16 +116,16 @@ class ProductsList extends React.Component {
           </ul>
         </div>
         <div className={styles.sectionTitle}>
-          O<span className={styles.letter}></span> 
-          U<span className={styles.letter}></span> 
-          R<span className={styles.letter}></span> &nbsp; &nbsp;
-          P<span className={styles.letter}></span> 
-          R<span className={styles.letter}></span> 
-          O<span className={styles.letter}></span> 
-          D<span className={styles.letter}></span> 
-          U<span className={styles.letter}></span> 
-          C<span className={styles.letter}></span> 
-          T<span className={styles.letter}></span>S
+          O<span className={styles.letter}></span>U
+          <span className={styles.letter}></span>R
+          <span className={styles.letter}></span> &nbsp; &nbsp; P
+          <span className={styles.letter}></span>R
+          <span className={styles.letter}></span>O
+          <span className={styles.letter}></span>D
+          <span className={styles.letter}></span>U
+          <span className={styles.letter}></span>C
+          <span className={styles.letter}></span>T
+          <span className={styles.letter}></span>S
         </div>
         <div className={styles.allProductsToChoose}>
           <div className={styles.allProducts}>
@@ -175,14 +175,16 @@ class ProductsList extends React.Component {
           {minerals.length ? (
             minerals.map((mineral) => (
               <div className={styles.mineral} key={mineral.title}>
-                <Link
-                  key={mineral.title}
-                  to={`/minerals/${mineral.title}`}
-                  className={styles.photoInsideMaterial}
-                >
+                <div className={styles.photoInsideMaterial}>
+                  <Link
+                    className={styles.clickToExplore}
+                    key={mineral.title}
+                    to={`/minerals/${mineral.title}`}
+                  >
+                    Click to explore
+                  </Link>
                   <img src={mineral.photo} alt={"mineralPhoto"} />
-                  <p className={styles.clickToExplore}>Click to explore</p>
-                </Link>
+                </div>
                 <div className={styles.mineralText}>
                   <div className={styles.mineralName}>
                     <div className={styles.mineralNameContent}>

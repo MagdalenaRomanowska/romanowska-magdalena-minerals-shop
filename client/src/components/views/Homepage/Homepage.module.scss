@@ -8,7 +8,7 @@
 .allHomepage {
   background-image: url("https://i.postimg.cc/QC3sCxPZ/geoda-Duza-Pasy.jpg");
   background-size: cover;
-  height: 88vh;
+  height: 88vh;  
 }
 
 .background {
@@ -227,6 +227,10 @@
     font-size: 16px;
     letter-spacing: 8px;
     margin-top: 100px;
+  }
+
+  .wordCarousel {
+    display: none;
   }
   
   .allHomepage {
