@@ -1,8 +1,8 @@
-import React from "react";
-import clsx from "clsx";
-import styles from "./OrderSent.module.scss";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react';
+import clsx from 'clsx';
+import styles from './OrderSent.module.scss';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const OrderSent = ({ className }) => (
   <div className={clsx(className, styles.root)}>
@@ -11,7 +11,7 @@ const OrderSent = ({ className }) => (
         <div className={styles.title}>
           <span className={styles.block}></span>
           <h1>
-            S u c c e s s ! &nbsp; <i className={"far fa-gem"}></i>
+            S u c c e s s ! &nbsp; <i className={'far fa-gem'}></i>
           </h1>
         </div>
 

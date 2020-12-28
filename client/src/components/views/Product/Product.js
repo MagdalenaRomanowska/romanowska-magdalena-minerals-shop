@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Product.module.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Product.module.scss';
+import { Link } from 'react-router-dom';
 
 class Product extends React.Component {
   constructor(props) {
@@ -30,100 +30,100 @@ class Product extends React.Component {
         <div className={styles.squaresLeftSided}>
           <ul className={styles.squares}>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
           </ul>
         </div>
@@ -132,18 +132,18 @@ class Product extends React.Component {
         <div className={styles.productDetailPhotos} key={product.titleProduct}>
           <img
             src={product.photoProductDetail01}
-            alt={"photoProductDetail01"}
-            className={"col-lg-4"}
+            alt={'photoProductDetail01'}
+            className={'col-lg-4'}
           />
           <img
             src={product.photoProductDetail02}
-            alt={"photoProductDetail02"}
-            className={"col-lg-4"}
+            alt={'photoProductDetail02'}
+            className={'col-lg-4'}
           />
           <img
             src={product.photoProductDetail03}
-            alt={"photoProductDetail03"}
-            className={"col-lg-4"}
+            alt={'photoProductDetail03'}
+            className={'col-lg-4'}
           />
         </div>
         <div className={styles.textProduct}>
@@ -181,7 +181,7 @@ class Product extends React.Component {
               Add to cart
             </div>
           </div>
-          <Link to={"/basket"} className={styles.goToBasket}>
+          <Link to={'/basket'} className={styles.goToBasket}>
             Go &nbsp;to &nbsp;basket
           </Link>
         </div>

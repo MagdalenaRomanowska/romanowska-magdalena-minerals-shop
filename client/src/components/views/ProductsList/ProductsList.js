@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./ProductsList.module.scss";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './ProductsList.module.scss';
+import { Link } from 'react-router-dom';
 
 class ProductsList extends React.Component {
   componentDidMount() {
@@ -18,100 +18,100 @@ class ProductsList extends React.Component {
         <div className={styles.squaresLeftSided}>
           <ul className={styles.squares}>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
             <li>
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i>
             </li>
           </ul>
         </div>
@@ -139,7 +139,7 @@ class ProductsList extends React.Component {
                   >
                     <img
                       src={product.photoProductHomepage}
-                      alt={"PhotoProduct"}
+                      alt={'PhotoProduct'}
                     />
                     <p className={styles.clickToSeeDetails}>
                       Click to see details
@@ -174,9 +174,8 @@ class ProductsList extends React.Component {
         <div className={styles.allMinerals}>
           {minerals.length ? (
             minerals.map((mineral) => (
-              <div className={styles.photoInsideMaterial}>
-                <img src={mineral.photo} alt={"mineralPhoto"} />
-
+              <div className={styles.photoInsideMaterial} key={mineral.title}>
+                <img src={mineral.photo} alt={'mineralPhoto'} />
                 <div className={styles.mineralTitle}>
                   {mineral.title}<br></br> &nbsp; <br></br>
                   <Link
@@ -199,8 +198,10 @@ class ProductsList extends React.Component {
 }
 
 ProductsList.propTypes = {
-  minerals: PropTypes.any,
-  products: PropTypes.any,
+  minerals: PropTypes.string,
+  products: PropTypes.string,
+  loadMinerals: PropTypes.func, 
+  loadProducts: PropTypes.func,
 };
 
 export default ProductsList;

@@ -1,8 +1,8 @@
-import React from "react";
-import clsx from "clsx";
-import styles from "./Basket.module.scss";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import React from 'react';
+import clsx from 'clsx';
+import styles from './Basket.module.scss';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Basket extends React.Component {
   // constructor(props) {
@@ -31,8 +31,8 @@ class Basket extends React.Component {
         <div className={styles.cart}>
           <div className={styles.cartContent}>
             <div className={styles.cartContentTitle}>
-              <i className={"far fa-gem"}></i> Complete your order{" "}
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i> Complete your order{' '}
+              <i className={'far fa-gem'}></i>
             </div>
             <form className={styles.cartOrder}>
               <ul className={styles.orderedJewelry}>
@@ -53,7 +53,7 @@ class Basket extends React.Component {
                 </li>
                 {orders !== undefined && orders.length ? (
                   orders.map((order) => (
-                    <li>
+                    <li key={order.price}>
                       <div className={styles.orderedItems}>
                         {order.orderedItems}
                       </div>
@@ -76,10 +76,10 @@ class Basket extends React.Component {
                       </div>
                       <div className={styles.price}>{order.price} $</div>
                       <div className={styles.comment}>
-                        <input type="text" name="name" value={order.comment} />
+                        <input type='text' name='name' value={order.comment} />
                       </div>
                       <div className={styles.icons}>
-                        <i className={"fas fa-trash-alt"}></i>
+                        <i className={'fas fa-trash-alt'}></i>
                       </div>
                     </li>
                   ))
@@ -104,11 +104,11 @@ class Basket extends React.Component {
                     <strong>Total:</strong>
                   </span>
                   <span className={styles.cartOrderPriceSum}>
-                  <strong>0</strong>$
+                    <strong>0</strong>$
                   </span>
                 </li>
               </ul>
-              <Link to={"/myOrder"} className={styles.clickToContinue}>
+              <Link to={'/myOrder'} className={styles.clickToContinue}>
                 Click &nbsp;to &nbsp;continue
               </Link>
             </form>

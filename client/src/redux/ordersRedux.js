@@ -1,5 +1,5 @@
-import axios from "axios";
-import { API_URL } from "../config";
+import axios from 'axios';
+import { API_URL } from '../config';
 
 /* SELECTORS */
 export const getOrders = ({ orders }) => {
@@ -9,16 +9,16 @@ export const getOrders = ({ orders }) => {
 /* ACTIONS */
 
 // action name creator
-const reducerName = "orders";
+const reducerName = 'orders';
 const createActionName = (name) => `app/${reducerName}/${name}`;
 
-const START_REQUEST = createActionName("START_REQUEST");
-const END_REQUEST = createActionName("END_REQUEST");
-const ERROR_REQUEST = createActionName("ERROR_REQUEST");
-const LOAD_ORDERS = createActionName("LOAD_ORDERS");
-const ADD_ORDER = createActionName("ADD_ORDER");
-const INCREASE_AMOUNT = createActionName("INCREASE_AMOUNT");
-const DECREASE_AMOUNT = createActionName("DECREASE_AMOUNT");
+const START_REQUEST = createActionName('START_REQUEST');
+const END_REQUEST = createActionName('END_REQUEST');
+const ERROR_REQUEST = createActionName('ERROR_REQUEST');
+const LOAD_ORDERS = createActionName('LOAD_ORDERS');
+const ADD_ORDER = createActionName('ADD_ORDER');
+const INCREASE_AMOUNT = createActionName('INCREASE_AMOUNT');
+const DECREASE_AMOUNT = createActionName('DECREASE_AMOUNT');
 
 export const startRequest = (payload) => ({ payload, type: START_REQUEST });
 export const endRequest = (payload) => ({ payload, type: END_REQUEST });
@@ -37,13 +37,13 @@ export const getOrder = ({ orders }, orderId) => {
 
 export const loadOrdersRequest = () => {
   return async (dispatch) => {
-    dispatch(startRequest({ name: "LOAD_ORDERS" }));
+    dispatch(startRequest({ name: 'LOAD_ORDERS' }));
     try {
       let res = await axios.get(`${API_URL}/orders`);
       dispatch(loadOrders(res.data));
-      dispatch(endRequest({ name: "LOAD_ORDERS" }));
+      dispatch(endRequest({ name: 'LOAD_ORDERS' }));
     } catch (e) {
-      dispatch(errorRequest({ name: "LOAD_ORDERS", error: e.message }));
+      dispatch(errorRequest({ name: 'LOAD_ORDERS', error: e.message }));
     }
   };
 };
