@@ -37,16 +37,16 @@ class Basket extends React.Component {
             <form className={styles.cartOrder}>
               <ul className={styles.orderedJewelry}>
                 <li>
-                  <div className={styles.orderedItems}>
+                  <div className={`${styles.orderedItems} ${styles.hideOnMobiles}`}>
                     <b>ORDERED ITEMS</b>
                   </div>
-                  <div className={styles.amountAll}>
+                  <div className={`${styles.amountAll} ${styles.hideOnMobiles}`}>
                     <b>AMOUNT</b>
                   </div>
-                  <div className={styles.price}>
+                  <div className={`${styles.price} ${styles.hideOnMobiles}`}>
                     <b>PRICE</b>
                   </div>
-                  <div className={styles.comment}>
+                  <div className={`${styles.comment} ${styles.hideOnMobiles}`}>
                     <b>COMMENT YOUR ORDER (size etc.)</b>
                   </div>
                   <div className={styles.icons}></div>
@@ -74,7 +74,7 @@ class Basket extends React.Component {
                           </button>
                         </div>
                       </div>
-                      <div className={styles.price}>{order.price}</div>
+                      <div className={styles.price}>{order.price} $</div>
                       <div className={styles.comment}>
                         <input type="text" name="name" value={order.comment} />
                       </div>
@@ -97,14 +97,14 @@ class Basket extends React.Component {
                 </li>
                 <li className={styles.cartOrderDelivery}>
                   <span className={styles.cartOrderPriceName}>Delivery:</span>
-                  <span className={styles.cartOrderPriceSum}>$20</span>
+                  <span className={styles.cartOrderPriceSum}>20$</span>
                 </li>
                 <li className={styles.cartOrderTotal}>
                   <span className={styles.cartOrderPriceName}>
                     <strong>Total:</strong>
                   </span>
                   <span className={styles.cartOrderPriceSum}>
-                    $<strong>0</strong>
+                  <strong>0</strong>$
                   </span>
                 </li>
               </ul>

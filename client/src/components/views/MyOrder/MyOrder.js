@@ -16,16 +16,16 @@ const MyOrder = ({ className }) => (
         <form className={styles.cartOrder}>
           <ul className={styles.orderedMinerals}>
             <li>
-              <div className={styles.orderedItems}>
+              <div className={`${styles.orderedItems} ${styles.hideOnMobiles}`}>
                 <b>ORDERED ITEMS</b>
               </div>
-              <div className={styles.amountAll}>
+              <div className={`${styles.amountAll} ${styles.hideOnMobiles}`}>
                 <b>AMOUNT</b>
               </div>
-              <div className={styles.price}>
+              <div className={`${styles.price} ${styles.hideOnMobiles}`}>
                 <b>PRICE</b>
               </div>
-              <div className={styles.comment}>
+              <div className={`${styles.comment} ${styles.hideOnMobiles}`}>
                 <b>YOUR COMMENT</b>
               </div>
             </li>

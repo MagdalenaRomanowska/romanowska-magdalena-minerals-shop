@@ -52,7 +52,12 @@
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
-  background: linear-gradient(90deg, $color-lightblue, $color-navyblue, $color-lightblue);
+  background: linear-gradient(
+    90deg,
+    $color-lightblue,
+    $color-navyblue,
+    $color-lightblue
+  );
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 5s linear infinite;
@@ -167,3 +172,381 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////// Media query
+@media (max-width: 767px) {
+  //sm
+
+  .root {
+    padding: 0;
+  } 
+
+  .cartContentTitle {
+    font-size: 24px;
+    color: $color-importantDark;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+  }
+
+  .orderedJewelry li {
+    display: block;
+    width: 96vw;    
+  }
+
+  .orderedJewelry {
+    padding-left: 6px;
+  }
+
+  .clickToContinue {  
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .hideOnMobiles {
+    display: none;
+  }
+
+  .orderedItems {
+    width: 90vw;
+    font-size: 24px;
+  }
+
+  .price {
+    width: 96vw;
+    text-align: left;
+    font-size: 24px;
+  } 
+
+  .comment {
+    width: 92vw;
+    text-align: center;
+    input {
+      padding: 4px 0 4px 4px;
+      font-size: 10px;
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  .cartOrderPrice {
+    font-size: 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 411px) {
+  // pixel 2 xl
+  .root {
+    padding: 0;
+  } 
+
+  .cartContentTitle {
+    font-size: 24px;
+    color: $color-importantDark;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+  }
+
+  .orderedJewelry li {
+    display: block;
+    width: 96vw;    
+  }
+
+  .orderedJewelry {
+    padding-left: 6px;
+  }
+
+  .clickToContinue {  
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .hideOnMobiles {
+    display: none;
+  }
+
+  .orderedItems {
+    width: 90vw;
+    font-size: 24px;
+  }
+
+  .price {
+    width: 96vw;
+    text-align: left;
+    font-size: 24px;
+  } 
+
+  .comment {
+    width: 92vw;
+    text-align: center;
+    input {
+      padding: 4px 0 4px 4px;
+      font-size: 10px;
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  .cartOrderPrice {
+    font-size: 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  // sm poziom
+  .root {
+    padding: 0;
+  } 
+
+  .cartContentTitle {
+    font-size: 24px;
+    color: $color-importantDark;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+  }
+
+  .orderedJewelry li {
+    display: block;
+    width: 96vw;    
+  }
+
+  .orderedJewelry {
+    padding-left: 6px;
+  }
+
+  .clickToContinue {  
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .hideOnMobiles {
+    display: none;
+  }
+
+  .orderedItems {
+    width: 90vw;
+    font-size: 24px;
+  }
+
+  .price {
+    width: 96vw;
+    text-align: left;
+    font-size: 24px;
+  } 
+
+  .comment {
+    width: 92vw;
+    text-align: center;
+    input {
+      padding: 4px 0 4px 4px;
+      font-size: 10px;
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  .cartOrderPrice {
+    font-size: 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  //iPad
+  .root {
+    padding: 0;
+  } 
+
+  .cartContentTitle {
+    font-size: 24px;
+    color: $color-importantDark;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+  }
+
+  .orderedJewelry li {
+    display: block;
+    width: 96vw;    
+  }
+
+  .orderedJewelry {
+    padding-left: 6px;
+  }
+
+  .clickToContinue {  
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .hideOnMobiles {
+    display: none;
+  }
+
+  .orderedItems {
+    width: 90vw;
+    font-size: 24px;
+  }
+
+  .price {
+    width: 96vw;
+    text-align: left;
+    font-size: 24px;
+  } 
+
+  .comment {
+    width: 92vw;
+    text-align: center;
+    input {
+      padding: 4px 0 4px 4px;
+      font-size: 10px;
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  .cartOrderPrice {
+    font-size: 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  //lg
+  .root {
+    padding: 0;
+  } 
+
+  .cartContentTitle {
+    font-size: 24px;
+    color: $color-importantDark;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+  }
+
+  .orderedJewelry li {
+    display: block;
+    width: 96vw;    
+  }
+
+  .orderedJewelry {
+    padding-left: 6px;
+  }
+
+  .clickToContinue {  
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .hideOnMobiles {
+    display: none;
+  }
+
+  .orderedItems {
+    width: 90vw;
+    font-size: 24px;
+  }
+
+  .price {
+    width: 96vw;
+    text-align: left;
+    font-size: 24px;
+  } 
+
+  .comment {
+    width: 92vw;
+    text-align: center;
+    input {
+      padding: 4px 0 4px 4px;
+      font-size: 10px;
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  .cartOrderPrice {
+    font-size: 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  //xl
+  .root {
+    padding: 0;
+  } 
+
+  .cartContentTitle {
+    font-size: 24px;
+    color: $color-importantDark;
+    padding: 8px 0 8px 8px;
+    margin-bottom: 8px;
+  }
+
+  .orderedJewelry li {
+    display: block;
+    width: 96vw;    
+  }
+
+  .orderedJewelry {
+    padding-left: 6px;
+  }
+
+  .clickToContinue {  
+    margin: 0 0 0 48px;
+    padding: 8px 12px;
+    font-size: 20px;
+  }
+
+  .hideOnMobiles {
+    display: none;
+  }
+
+  .orderedItems {
+    width: 90vw;
+    font-size: 24px;
+  }
+
+  .price {
+    width: 96vw;
+    text-align: left;
+    font-size: 24px;
+  } 
+
+  .comment {
+    width: 92vw;
+    text-align: center;
+    input {
+      padding: 4px 0 4px 4px;
+      font-size: 10px;
+      width: 100%;
+      height: 48px;
+    }
+  }
+
+  .cartOrderPrice {
+    font-size: 20px;
+    margin-bottom: 40px;
+    li {
+      padding: 8px 0;
+    }
+  }
+}
