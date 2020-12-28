@@ -1,71 +1,130 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
 
 .root {
-    background-color: $color-lightblue;
-    color: $color-navyblue;
-    height: 75vh;
-    font-family: $font-text;
- }
+  background-color: $color-lightblue;
+  color: $color-navyblue;
+  height: 75vh;
+  font-family: $font-text;
+}
 
 .text {
-    font-size: 60px;
-    padding: 100px 0 120px 48px;
+  font-size: 60px;
+  padding: 100px 0 120px 48px;
 }
 
 .backToHomepage {
-    text-transform: uppercase;
-    width: fit-content; 
-    background: linear-gradient(
-      -45deg,
-      $color-blue,
-      $color-importantDark,
-      $color-darkblue,
-      $color-importantDark,
-      $color-blue
-    );
-    background-size: 200% 200%;
-    margin: 0 0 0 48px;
-    padding: 20px 40px;
+  text-transform: uppercase;
+  width: fit-content;
+  background: linear-gradient(
+    -45deg,
+    $color-blue,
+    $color-importantDark,
+    $color-darkblue,
+    $color-importantDark,
+    $color-blue
+  );
+  background-size: 200% 200%;
+  margin: 0 0 0 48px;
+  padding: 20px 40px;
+  color: $color-light;
+  border: solid 1px black;
+  font-size: 32px;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    box-shadow: 0 0px 20px $color-navyblue;
+    text-decoration: none;
     color: $color-light;
-    border: solid 1px black;
-    font-size: 32px;
-    position: relative;
-    z-index: 1;
-    &:hover {
-      box-shadow: 0 0px 20px $color-navyblue;
-      text-decoration: none;
-      color: $color-light;
-    }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////// Media query
+@media (max-width: 767px) {
+  //sm
+  .text {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 60px;
   }
 
-  //////////////////////////////////////////////////////////////////////////////////////////// Media query 
-  @media (max-width: 767px) {
-    //sm
-  
+  .backToHomepage {
+    margin:12px;
+    padding: 4px 8px;
+    font-size: 20px;
   }
-  
-  @media (max-width: 411px) {
-    // pixel 2 xl
-  
+}
+
+@media (max-width: 411px) {
+  // pixel 2 xl
+  .text {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 60px;
   }
-  
-  @media (max-width: 568px) {
-    // sm poziom
-  
+
+  .backToHomepage {
+    margin:12px;
+    padding: 4px 8px;
+    font-size: 20px;
   }
-  
-  @media (max-width: 768px) {
-    //iPad
-  
+}
+
+@media (max-width: 568px) {
+  // sm poziom
+  .text {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 60px;
   }
-  
-  @media (max-width: 992px) {
-    //lg
-  
+
+  .backToHomepage {
+    margin:12px;
+    padding: 4px 8px;
+    font-size: 20px;
   }
-  
-  @media (max-width: 1200px) {
-    //xl
-   
+}
+
+@media (max-width: 768px) {
+  //iPad
+  .text {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 60px;
   }
-  
+
+  .backToHomepage {
+    margin:12px;
+    padding: 4px 8px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  //lg
+  .text {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 60px;
+  }
+
+  .backToHomepage {
+    margin:12px;
+    padding: 4px 8px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  //xl
+  .text {
+    font-size: 20px;
+    padding: 12px;
+    margin-bottom: 60px;
+  }
+
+  .backToHomepage {
+    margin:12px;
+    padding: 4px 8px;
+    font-size: 20px;
+  }
+}
