@@ -127,6 +127,14 @@ class Product extends React.Component {
             </li>
           </ul>
         </div>
+        <div className={styles.giftBoxesTitle}>Free gift box to every order!</div>
+        <div className={styles.giftBoxes} key={product.titleProduct}>
+          <div className={styles.giftBox01}><img src={product.photoGiftBox01} alt={'photoGiftBox01'}/></div>
+          <div className={styles.giftBox02}><img src={product.photoGiftBox02} alt={'photoGiftBox02'}/></div>
+          <div className={styles.giftBox03}><img src={product.photoGiftBox03} alt={'photoGiftBox03'}/></div>
+          <div className={styles.giftBox04}><img src={product.photoGiftBox04} alt={'photoGiftBox04'}/></div>
+          <div className={styles.giftBox05}><img src={product.photoGiftBox05} alt={'photoGiftBox05'}/></div>
+        </div>
         <div className={styles.titleProduct}>{product.titleProduct}</div>
         <div className={styles.textProduct}>{product.textProduct}</div>
         <div className={styles.productDetailPhotos} key={product.titleProduct}>
@@ -171,7 +179,7 @@ class Product extends React.Component {
               className={styles.addToCart}
               onClick={(event) =>
                 addOrder({
-                  id: 3,
+                  productId: product._id,
                   orderedItems: product.titleProduct,
                   amountAll: this.state.clicks,
                   price: product.priceProduct * this.state.clicks,

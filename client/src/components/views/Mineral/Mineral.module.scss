@@ -78,6 +78,7 @@
     height: 400px;
     object-fit: cover;
     border: solid 1px $color-dark;
+    transition: transform 0.2s;
     &:hover {
       transform: scale(1.2);
       box-shadow: 0 0px 10px $color-importantDark;

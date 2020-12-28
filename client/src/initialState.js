@@ -1,16 +1,16 @@
 const initialState = {
   orders: [
     {
-      id: 1,
-      orderedItems: 'Ammonite bracelet',
-      amountAll: '3',
-      price: '300',      
+      productId: 1,
+      orderedItems: 'Amethyst bracelet',
+      amountAll: 1,
+      price: 100,      
     },
     {
-      id: 2,
+      productId: 2,
       orderedItems: 'Apatite earings',
-      amountAll: '2',
-      price: '500',     
+      amountAll: 1,
+      price: 100,     
     },
   ],
 };

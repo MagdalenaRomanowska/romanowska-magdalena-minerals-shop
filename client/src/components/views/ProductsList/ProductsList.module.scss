@@ -61,7 +61,19 @@
   margin: 0 56px;
   transition: box-shadow 0.4s ease-in-out;
   &:hover img {
-    box-shadow: 0 0px 10px $color-navyblue;
+    animation: pulse 1s infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   &:hover .clickToSeeDetails {
     opacity: 1;
@@ -152,6 +164,7 @@
   color: $color-light;
   width: 20vw;
   text-align: center;
+  text-shadow: 2px 2px $color-navyblue;
   margin: 0 2.25vw;
   text-transform: uppercase;
   letter-spacing: 20px;
@@ -502,10 +515,10 @@
   }
 
   .product img {
-    width: 180px;
+    width: 40vw;
     border: solid 1px $color-dark;
     padding: 1px;
-    height: 170px;
+    height: 140px;
     object-fit: cover;
     transition: transform 0.2s;
     &:hover {

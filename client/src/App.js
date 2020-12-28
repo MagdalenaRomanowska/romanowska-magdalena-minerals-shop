@@ -9,7 +9,7 @@ import Homepage from './components/views/Homepage/Homepage';
 import Mineral from './components/views/Mineral/MineralContainer';
 import Product from './components/views/Product/ProductContainer';
 import Basket from './components/views/Basket/BasketContainer';
-import MyOrder from './components/views/MyOrder/MyOrder';
+import MyOrder from './components/views/MyOrder/MyOrderContainer';
 import NotFound from './components/views/NotFound/NotFound';
 import OrderSent from './components/views/OrderSent/OrderSent';
 import ScrollToTopOfPage from './utils/ScrollToTopOfPage';

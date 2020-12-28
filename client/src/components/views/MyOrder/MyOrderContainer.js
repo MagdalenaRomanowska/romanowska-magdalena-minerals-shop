@@ -1,16 +1,14 @@
 import {connect} from 'react-redux';
-import Basket from './Basket';
-import { getOrders, increaseAmount, decreaseAmount } from '../../../redux/ordersRedux';
+import MyOrder from './MyOrder';
+import { getOrders, sendOrderRequest } from '../../../redux/ordersRedux';
 
 const mapStateToProps = (state) => ({
   orders: getOrders(state), 
 });
 
-const mapDispatchToProps = dispatch => ({
-  increaseAmount: order => dispatch(increaseAmount(order)),
-  decreaseAmount: order => dispatch(decreaseAmount(order)),
+const mapDispatchToProps = dispatch => ({  
+  sendOrder: orderSummary => dispatch(sendOrderRequest(orderSummary)),
 });
 
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Basket);
+export default connect(mapStateToProps, mapDispatchToProps)(MyOrder);

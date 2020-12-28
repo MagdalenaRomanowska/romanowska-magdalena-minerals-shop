@@ -116,11 +116,11 @@ class ProductsList extends React.Component {
           </ul>
         </div>
         <div className={styles.sectionTitle}>
-          O<span className={styles.letter}></span>U
+        O<span className={styles.letter}></span>U
           <span className={styles.letter}></span>R
           <span className={styles.letter}></span> &nbsp; &nbsp; P
           <span className={styles.letter}></span>R
-          <span className={styles.letter}></span>O
+          <span className={styles.letter}></span><i className={'far fa-gem'}></i>
           <span className={styles.letter}></span>D
           <span className={styles.letter}></span>U
           <span className={styles.letter}></span>C
