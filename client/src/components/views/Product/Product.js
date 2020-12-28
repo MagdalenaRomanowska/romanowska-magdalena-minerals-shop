@@ -23,7 +23,7 @@ class Product extends React.Component {
   };
 
   render() {
-    const { product } = this.props;
+    const { product, addOrder } = this.props;
 
     return (
       <div className={styles.productDescription}>
@@ -146,7 +146,9 @@ class Product extends React.Component {
             className={"col-lg-4"}
           />
         </div>
-        <div className={styles.textProduct}>Price: {product.priceProduct} $</div>
+        <div className={styles.textProduct}>
+          Price: {product.priceProduct} $
+        </div>
         <div className={styles.selectQuantity}>
           <div>Select quantity</div>
           <div className={styles.plusAndMinus}>
@@ -159,11 +161,25 @@ class Product extends React.Component {
             </button>
           </div>
           <div className={styles.totalPrice}>
-            <div className={styles.total}>Total price: {product.priceProduct * this.state.clicks} $</div>
+            <div className={styles.total}>
+              Total price: {product.priceProduct * this.state.clicks} $
+            </div>
             <div className={styles.totalBox}></div>
           </div>
           <div className={styles.addToCartContainer}>
-            <p className={styles.addToCart}>Add to cart</p>
+            <div
+              className={styles.addToCart}
+              onClick={(event) =>
+                addOrder({
+                  id: 3,
+                  orderedItems: product.titleProduct,
+                  amountAll: this.state.clicks,
+                  price: product.priceProduct * this.state.clicks,
+                })
+              }
+            >
+              Add to cart
+            </div>
           </div>
           <Link to={"/basket"} className={styles.goToBasket}>
             Go &nbsp;to &nbsp;basket
@@ -176,6 +192,7 @@ class Product extends React.Component {
 
 Product.propTypes = {
   product: PropTypes.any,
+  addOrder: PropTypes.func,
 };
 
 export default Product;

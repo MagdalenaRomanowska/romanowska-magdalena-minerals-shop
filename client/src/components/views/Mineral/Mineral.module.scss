@@ -2,7 +2,6 @@
 
 .main {
   font-family: $font-text;
-  font-size: 16px;
 }
 
 .background {
@@ -69,16 +68,6 @@
   }
 }
 
-.photoDescription2 {
-  color: $color-navyblue;
-  text-align: center;
-  padding: 180px 0 60px 0;
-  letter-spacing: 6px;
-  &:hover {
-    color: $color-important;
-  }
-}
-
 .detailPhoto {
   display: inline-flex;
   left: 0%;
@@ -112,36 +101,43 @@
 
 .backToHomepage {
   margin-top: 148px;
-  position: absolute; 
-  top: 50%; 
-  left: 50%; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
-	background-size: 200% 200%;
-	animation: gradient 8s ease infinite;
+  background: linear-gradient(
+    -45deg,
+    $color-blue,
+    $color-importantDark,
+    $color-darkblue,
+    $color-importantDark,
+    $color-blue
+  );
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
   padding: 20px 48px;
   color: $color-light;
   border: solid 1px black;
   text-transform: uppercase;
-    &:hover {
-      text-decoration: none;
-      color: $color-light;
-      font-weight: bold;
-      box-shadow: 0 0px 10px $color-navyblue;
-    }
+  &:hover {
+    text-decoration: none;
+    color: $color-light;
+    font-weight: bold;
+    box-shadow: 0 0px 10px $color-navyblue;
+  }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .postContent {
@@ -249,110 +245,353 @@
   }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////// Media query 
+//////////////////////////////////////////////////////////////////////////////////////////// Media query
 
 @media (max-width: 767px) {
   //sm
-  .detailTitle {
-    font-size: 24px;
-    padding: 40px 0 32px 0;
+
+  .background {
+    height: 100%;
   }
-  
+
+  .detailTitle {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 0;
+  }
+
   .detailText {
     font-size: 14px;
     color: $color-navyblue;
     text-align: center;
-    padding: 0 12px 32px 12px;
+    padding: 8px 24px;
   }
 
-  .photoDescription, .photoDescription2 {
-    font-size: 16px;
-    padding: 20px 8px;
-    letter-spacing: 3px;
+  .photoDescription {
+    font-size: 20px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 0;
+    letter-spacing: 0;
   }
 
   .detailPhoto {
     display: block;
-    transform: translate(25%);
     img {
-      margin: 16px;
-      width: 160px;
+      margin: 4px 1.25vw;
+      width: 96vw;
+      height: 80px;
+      object-fit: cover;
+      border: solid 1px $color-dark;
     }
-    h2 {
-      padding: 12px 0 8px 0;
-      font-size: 20px;
-    }
   }
-  
-  .postDetailPrice {
-    text-align: center;
-  }
-  
-  .selectQuantity {
-    font-size: 16px;
-    padding: 16px 0 0 0;
-    text-align: center;
-    text-transform: uppercase;
-  }
-    
-  .totalPrice {
-    margin: 0 0 8px 0;
-  }
-    
-  .amount {
-    margin: 0 8px;
-    color: $color-navyblue;
-    background-color: $color-light;
-    height: 24px;
-    width: 24px;
-    border: solid 1px $color-navyblue;
-  }
-  
+
   .homepageContainer {
     position: relative;
-    height: 140px;
+    height: 40px;
   }
-  
+
   .backToHomepage {
-    margin-top: 60px;
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    background: linear-gradient(-45deg, $color-blue, $color-importantDark, $color-darkblue, $color-importantDark, $color-blue);
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
-    padding: 20px 48px;
-    color: $color-light;
-    border: solid 1px black;
-    text-transform: uppercase;
-      &:hover {
-        text-decoration: none;
-        color: $color-light;
-        font-weight: bold;
-        box-shadow: 0 0px 10px $color-navyblue;
-      }
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 8px;
+    padding: 8px;
   }
-  
+
+  .squares {
+    display: none;
+  }
 }
 
 @media (max-width: 411px) {
   // pixel 2 xl
+  .background {
+    height: 100%;
+  }
+
+  .detailTitle {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  .detailText {
+    font-size: 14px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 8px 24px;
+  }
+
+  .photoDescription {
+    font-size: 20px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 0;
+    letter-spacing: 0;
+  }
+
+  .detailPhoto {
+    display: block;
+    img {
+      margin: 4px 1.25vw;
+      width: 96vw;
+      height: 80px;
+      object-fit: cover;
+      border: solid 1px $color-dark;
+    }
+  }
+
+  .homepageContainer {
+    position: relative;
+    height: 40px;
+  }
+
+  .backToHomepage {
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 8px;
+    padding: 8px;
+  }
+
+  .squares {
+    display: none;
+  }
 }
 
 @media (max-width: 568px) {
   // sm poziom
+  .background {
+    height: 100%;
+  }
+
+  .detailTitle {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  .detailText {
+    font-size: 14px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 8px 24px;
+  }
+
+  .photoDescription {
+    font-size: 20px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 0;
+    letter-spacing: 0;
+  }
+
+  .detailPhoto {
+    display: block;
+    img {
+      margin: 4px 1.25vw;
+      width: 96vw;
+      height: 80px;
+      object-fit: cover;
+      border: solid 1px $color-dark;
+    }
+  }
+
+  .homepageContainer {
+    position: relative;
+    height: 40px;
+  }
+
+  .backToHomepage {
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 8px;
+    padding: 8px;
+  }
+
+  .squares {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   //iPad
+  .background {
+    height: 100%;
+  }
+
+  .detailTitle {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  .detailText {
+    font-size: 14px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 8px 24px;
+  }
+
+  .photoDescription {
+    font-size: 20px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 0;
+    letter-spacing: 0;
+  }
+
+  .detailPhoto {
+    display: block;
+    img {
+      margin: 4px 1.25vw;
+      width: 96vw;
+      height: 80px;
+      object-fit: cover;
+      border: solid 1px $color-dark;
+    }
+  }
+
+  .homepageContainer {
+    position: relative;
+    height: 40px;
+  }
+
+  .backToHomepage {
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 8px;
+    padding: 8px;
+  }
+
+  .squares {
+    display: none;
+  }
 }
 
 @media (max-width: 992px) {
   //lg
+  .background {
+    height: 100%;
+  }
+
+  .detailTitle {
+    font-size: 20px;
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  .detailText {
+    font-size: 14px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 8px 24px;
+  }
+
+  .photoDescription {
+    font-size: 20px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 0;
+    letter-spacing: 0;
+  }
+
+  .detailPhoto {
+    display: block;
+    img {
+      margin: 4px 1.25vw;
+      width: 96vw;
+      height: 80px;
+      object-fit: cover;
+      border: solid 1px $color-dark;
+    }
+  }
+
+  .homepageContainer {
+    position: relative;
+    height: 40px;
+  }
+
+  .backToHomepage {
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 8px;
+    padding: 8px;
+  }
+
+  .squares {
+    display: none;
+  }
 }
 
 @media (max-width: 1200px) {
   //xl
+  .background {
+    height: 100%;
+  }
+
+  .detailTitle {
+    font-size: 40px;
+    padding-top: 40px;
+    margin: 0;
+  }
+
+  .detailText {
+    font-size: 20px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 18px 32px;
+  }
+
+  .photoDescription {
+    font-size: 40px;
+    color: $color-navyblue;
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: 0;
+  }
+
+  .detailPhoto {
+    display: block;
+    img {
+      margin: 12px 1.25vw;
+      width: 96vw;
+      height: 120px;
+      object-fit: cover;
+      border: solid 1px $color-dark;
+    }
+  }
+
+  .homepageContainer {
+    position: relative;
+    height: 40px;
+  }
+
+  .backToHomepage {
+    margin-top: 8px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 8px;
+    padding: 8px;
+  }
+
+  .squares {
+    display: none;
+  }
 }

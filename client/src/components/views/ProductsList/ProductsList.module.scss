@@ -29,14 +29,20 @@
 }
 
 .letter {
-	display: inline-flex;
-	height: 30px;
-	width: 27px;
-	animation: letter 3s ease-in-out infinite alternate;
+  display: inline-flex;
+  height: 30px;
+  width: 27px;
+  animation: letter 3s ease-in-out infinite alternate;
 }
 @keyframes letter {
-	0%,30%{ width: 27px; }
-	70%,100%{ width: 3vw; }
+  0%,
+  30% {
+    width: 27px;
+  }
+  70%,
+  100% {
+    width: 3vw;
+  }
 }
 
 .product img {
@@ -78,7 +84,7 @@
   opacity: 0;
 }
 
-.productText, .mineralText {
+.productText {
   margin: 0 0 0 56px;
 }
 
@@ -88,31 +94,7 @@
 
 .allMinerals {
   display: inline-flex;
-  margin-top: 80px;
-  .productNameContent, .mineralNameContent {
-    font-size: 24px;
-    text-align: center;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 50%;
-      height: 2px;
-      bottom: 0;
-      left: 25%;
-      background-color: $color-navyblue;
-      visibility: hidden;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      -webkit-transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
-      transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
-    }
-    &:hover:before {
-      visibility: visible;
-      -webkit-transform: scaleX(1);
-      transform: scaleX(1);
-    }
-  }
+  margin-top: 80px; 
 }
 
 .allProducts {
@@ -121,7 +103,7 @@
   margin-top: 120px;
 }
 
-.product, .mineral {
+.product {
   color: $color-darkblue;
   font-size: 16px;
   display: block;
@@ -132,50 +114,49 @@
   }
 }
 
-.photoInsideMaterial img {
-  width: 380px;
-  border: solid 2px $color-dark;
-  padding: 2px;
-  height: 520px;
-  object-fit: cover;
-  margin: 0 0 20px 72px;
-  &:hover {
-    animation: pulse 1s infinite;
-    animation-timing-function: linear;
-  }
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-}
-
 .photoInsideMaterial {
+  position: relative;
+  cursor: pointer;
+
   &:hover .clickToExplore {
     opacity: 1;
     text-decoration: none;
     color: $color-light;
   }
+
+  img {
+    width: 20vw;
+    margin: 0 2.25vw;
+    border: solid 1px $color-dark;
+    height: 500px;
+    object-fit: cover;
+  }
 }
 
 .clickToExplore {
+  position: absolute;
   color: $color-light;
-  font-size: 24px;
+  font-size: 20px;
+  letter-spacing: 0px;
   width: fit-content;
   background-color: $color-darkblue;
-  padding: 16px 16px;
+  padding: 8px 16px;
   box-shadow: 0 0px 10px $color-navyblue;
   border: solid 1px $color-light;
   position: relative;
   z-index: 1;
-  left: 32%;
   opacity: 0;
+}
+
+.mineralTitle {
+  color: $color-light;
+  width: 20vw;
+  text-align: center;
+  margin: 0 2.25vw;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  position: absolute;
+  top: 10%;
 }
 
 .productPriceContent {
@@ -478,42 +459,24 @@
     height: 40px;
   }
 
-  .mineral {
-    font-size: 16px;
-    margin: 0 auto;
-  }
-
   .allMinerals {
     display: block;
-    margin-top: 24px;
-    .mineralNameContent {
-      font-size: 16px;
-      text-align: center;
-      margin: -70px 0 52px -60px;
+  }
+
+  .photoInsideMaterial {
+    img {
+      width: 96vw;
+      margin: 4px 1.25vw;
+      height: 120px;
     }
   }
 
-  .photoInsideMaterial img {
-    width: 80vw;
-    border: solid 2px $color-dark;
-    padding: 2px;
-    height: 150px;
-    object-fit: cover;     
-    margin: 0 0 20px 16px;   
-  }
-
   .clickToExplore {
-    font-size: 20px;
-    position: relative;
-    z-index: 1;
-    margin: 20px 0 0 0;
-    left: 25%;
     opacity: 1;
+    font-size: 8px;
+    padding: 2px;
   }
 
-  .mineralText {
-    margin: 60px 0 0 56px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -588,43 +551,19 @@
     height: 40px;
   }
 
-  .mineral {
-    font-size: 16px;
-    margin: 0 auto;
-  }
-
   .allMinerals {
     display: block;
-    margin-top: 44px;
-    .mineralNameContent {
-      font-size: 16px;
-      text-align: center;
-      margin: -70px 0 52px 0;
-      background-color: $color-light;
-      width: fit-content;
-      left: 45%;
-      padding: 2px 6px;
-      text-align: center;
-      border: solid 1px $color-dark;
+  }
+
+  .photoInsideMaterial {
+    img {
+      width: 96vw;
+      margin: 4px 1.25vw;
+      height: 120px;
     }
   }
 
-  .photoInsideMaterial img {
-    width: 90vw;
-    border: solid 2px $color-dark;
-    padding: 2px;
-    height: 200px;
-    object-fit: cover;  
-    margin: 0 0 20px 16px;        
-  }
-
   .clickToExplore {
-    font-size: 20px;
-    position: relative;
-    z-index: 1;
-    margin: 20px 0 0 0;
-    left: 33.3%;
-    top: 20px;
     opacity: 1;
   }
 }
@@ -633,36 +572,17 @@
   //xl, iPad horizontally
   .allMinerals {
     display: block;
-    margin-top: 44px;
-    .mineralNameContent {
-      font-size: 16px;
-      text-align: center;
-      margin: -70px 0 52px 0;
-      background-color: $color-light;
-      width: fit-content;
-      left: 38%;
-      padding: 2px 6px;
-      text-align: center;
-      border: solid 1px $color-dark;
+  }
+
+  .photoInsideMaterial {
+    img {
+      width: 96vw;
+      margin: 4px 1.25vw;
+      height: 120px;
     }
   }
 
-  .photoInsideMaterial img {
-    width: 90vw;
-    border: solid 2px $color-dark;
-    padding: 2px;
-    height: 200px;
-    object-fit: cover;    
-    margin: 0 0 20px 16px;      
-  }
-
   .clickToExplore {
-    font-size: 20px;
-    position: relative;
-    z-index: 1;
-    margin: 20px 0 0 0;
-    left: 36%;
-    top: 20px;
     opacity: 1;
   }
 }

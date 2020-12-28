@@ -174,23 +174,18 @@ class ProductsList extends React.Component {
         <div className={styles.allMinerals}>
           {minerals.length ? (
             minerals.map((mineral) => (
-              <div className={styles.mineral} key={mineral.title}>
-                <div className={styles.photoInsideMaterial}>
+              <div className={styles.photoInsideMaterial}>
+                <img src={mineral.photo} alt={"mineralPhoto"} />
+
+                <div className={styles.mineralTitle}>
+                  {mineral.title}<br></br> &nbsp; <br></br>
                   <Link
                     className={styles.clickToExplore}
                     key={mineral.title}
                     to={`/minerals/${mineral.title}`}
                   >
-                    Click to explore
+                    Explore
                   </Link>
-                  <img src={mineral.photo} alt={"mineralPhoto"} />
-                </div>
-                <div className={styles.mineralText}>
-                  <div className={styles.mineralName}>
-                    <div className={styles.mineralNameContent}>
-                      <b>{mineral.title}</b>
-                    </div>
-                  </div>
                 </div>
               </div>
             ))

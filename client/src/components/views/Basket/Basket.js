@@ -5,26 +5,26 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 class Basket extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      clicks: 1,
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     clicks: 1,
+  //   };
+  // }
 
-  IncrementItem = () => {
-    this.setState({ clicks: this.state.clicks + 1 });
-  };
-  DecreaseItem = () => {
-    if (this.state.clicks > 1) {
-      this.setState({ clicks: this.state.clicks - 1 });
-    } else {
-      this.setState({ clicks: 1 });
-    }
-  };
+  // IncrementItem = () => {
+  //   this.setState({ clicks: this.state.clicks + 1 });
+  // };
+  // DecreaseItem = () => {
+  //   if (this.state.clicks > 1) {
+  //     this.setState({ clicks: this.state.clicks - 1 });
+  //   } else {
+  //     this.setState({ clicks: 1 });
+  //   }
+  // };
 
   render() {
-    const { className, orders } = this.props;
+    const { className, orders, increaseAmount, decreaseAmount } = this.props;
 
     return (
       <div className={clsx(className, styles.root)}>
@@ -44,7 +44,7 @@ class Basket extends React.Component {
                     <b>AMOUNT</b>
                   </div>
                   <div className={styles.price}>
-                    <b>PRICE OF 1 ITEM</b>
+                    <b>PRICE</b>
                   </div>
                   <div className={styles.comment}>
                     <b>COMMENT YOUR ORDER (size etc.)</b>
@@ -60,14 +60,14 @@ class Basket extends React.Component {
                       <div className={styles.amountAll}>
                         <div className={styles.plusAndMinus}>
                           <button
-                            onClick={this.DecreaseItem}
+                            onClick={this.decreaseAmount}
                             className={styles.minus}
                           >
                             -
                           </button>
                           <div className={styles.amount}>{order.amountAll}</div>
                           <button
-                            onClick={this.IncrementItem}
+                            onClick={this.increaseAmount}
                             className={styles.plus}
                           >
                             +
@@ -76,13 +76,7 @@ class Basket extends React.Component {
                       </div>
                       <div className={styles.price}>{order.price}</div>
                       <div className={styles.comment}>
-                        <form>
-                          <input
-                            type="text"
-                            name="name"
-                            value={order.comment}
-                          />
-                        </form>
+                        <input type="text" name="name" value={order.comment} />
                       </div>
                       <div className={styles.icons}>
                         <i className={"fas fa-trash-alt"}></i>
@@ -95,7 +89,6 @@ class Basket extends React.Component {
               </ul>
               <div className={styles.line}></div>
               <ul className={styles.cartOrderPrice}>
-                
                 <li className={styles.cartOrderSubtotal}>
                   <span className={styles.cartOrderPriceName}>Subtotal:</span>
                   <span className={styles.cartOrderPriceSum}>
@@ -129,6 +122,8 @@ class Basket extends React.Component {
 Basket.propTypes = {
   className: PropTypes.any,
   orders: PropTypes.any,
+  increaseAmount: PropTypes.func,
+  decreaseAmount: PropTypes.func,
 };
 
 export default Basket;
