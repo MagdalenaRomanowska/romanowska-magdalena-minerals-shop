@@ -211,7 +211,7 @@ class Product extends React.Component {
                   productId: product._id,
                   orderedItems: product.titleProduct,
                   amountAll: this.state.clicks,
-                  price: product.priceProduct * this.state.clicks,
+                  price: product.priceProduct,
                 })
               }
             >
