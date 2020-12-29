@@ -3,8 +3,9 @@ const path = require('path');
 const app = express();
 var cors = require('cors');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost:27017/minerals', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@cluster0.hwehr.mongodb.net/rock-yourself-minerals-jewelry-shop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 db.once('open', () => {
