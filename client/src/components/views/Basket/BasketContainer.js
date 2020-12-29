@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   increaseAmount: productId => {
-    dispatch(increaseAmount(productId))
+    dispatch(increaseAmount(productId));
   },
   decreaseAmount: productId => dispatch(decreaseAmount(productId)),
   removeOrder: productId => dispatch(removeOrder(productId)),

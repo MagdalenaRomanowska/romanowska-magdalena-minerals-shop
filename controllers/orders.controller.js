@@ -1,4 +1,5 @@
-const Order = require('../models/order.model');
+const {Order} = require('../models/order.model');
+const {OrderItem} = require('../models/order.model');
 
 exports.getAll = async (req, res) => {
     try {
@@ -22,11 +23,16 @@ exports.getById = async (req, res) => {
 
 exports.post = async (req, res) => {
     try {
-        const { name, address, phoneNumber, email } = req.body;    
-        const newOrder = new Order({ name, address, phoneNumber, email });
+        const { orders, name, address, phoneNumber, email } = req.body;  
+        const orderItems = [];
+        orders.forEach(element => {
+          orderItem = new OrderItem({productId: element.productId, orderedItems: element.orderedItems, amountAll: element.amountAll, comment: element.comment });
+          orderItems.push(orderItem);
+        }); 
+        const newOrder = new Order({ orders: orderItems, name, address, phoneNumber, email });
         await newOrder.save();
         res.json({ message: 'OK' });
     } catch (err) {
-        res.status(500).json({ message: err });
+      res.status(500).json({ message: err });
     }
 };

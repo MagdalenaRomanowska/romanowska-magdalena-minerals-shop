@@ -1,11 +1,10 @@
-import React from "react";
-import clsx from "clsx";
-import styles from "./Basket.module.scss";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import React from 'react';
+import clsx from 'clsx';
+import styles from './Basket.module.scss';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Basket extends React.Component {
-
   render() {
     const {
       className,
@@ -14,15 +13,15 @@ class Basket extends React.Component {
       decreaseAmount,
       removeOrder,
       updateComment,
-    } = this.props;    
+    } = this.props;
 
     return (
       <div className={clsx(className, styles.root)}>
         <div className={styles.cart}>
           <div className={styles.cartContent}>
             <div className={styles.cartContentTitle}>
-              <i className={"far fa-gem"}></i> Complete your order{" "}
-              <i className={"far fa-gem"}></i>
+              <i className={'far fa-gem'}></i> Complete your order{' '}
+              <i className={'far fa-gem'}></i>
             </div>
             <form className={styles.cartOrder}>
               <ul className={styles.orderedJewelry}>
@@ -74,12 +73,19 @@ class Basket extends React.Component {
                           </button>
                         </div>
                       </div>
-                      <div className={styles.price}>{order.price * order.amountAll} $</div>
+                      <div className={styles.price}>
+                        {order.price * order.amountAll} $
+                      </div>
                       <div className={styles.comment}>
-                        <input type="text" name="name2" value={order.comment} onChange={(event) => {
-                              event.preventDefault();
-                              updateComment(order.productId, event.target.value);
-                            }} />
+                        <input
+                          type='text'
+                          name='name2'
+                          value={order.comment}
+                          onChange={(event) => {
+                            event.preventDefault();
+                            updateComment(order.productId, event.target.value);
+                          }}
+                        />
                       </div>
                       <div
                         onClick={(event) => {
@@ -88,7 +94,7 @@ class Basket extends React.Component {
                         }}
                         className={styles.icons}
                       >
-                        <i className={"fas fa-trash-alt"}></i>
+                        <i className={'fas fa-trash-alt'}></i>
                       </div>
                     </li>
                   ))
@@ -97,17 +103,24 @@ class Basket extends React.Component {
                 )}
               </ul>
               <div className={styles.line}></div>
-              <ul className={styles.cartOrderPrice}>                
+              <ul className={styles.cartOrderPrice}>
                 <li className={styles.cartOrderTotal}>
                   <span className={styles.cartOrderPriceName}>
                     <strong>Total:</strong>
                   </span>
                   <span className={styles.cartOrderPriceSum}>
-                    <strong> {orders.reduce((total, order) => total + order.price * order.amountAll, 0) } </strong> $
+                    <strong>
+                      {' '}
+                      {orders.reduce(
+                        (total, order) => total + order.price * order.amountAll,
+                        0
+                      )}{' '}
+                    </strong>{' '}
+                    $
                   </span>
                 </li>
               </ul>
-              <Link to={"/myOrder"} className={styles.clickToContinue}>
+              <Link to={'/myOrder'} className={styles.clickToContinue}>
                 Click &nbsp;to &nbsp;continue
               </Link>
             </form>

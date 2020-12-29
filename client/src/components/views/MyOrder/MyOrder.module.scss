@@ -102,6 +102,9 @@
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+  sup {
+    font-size: 32px;
+  }
 }
 
 .orderedItems {
@@ -180,6 +183,7 @@
 }
 
 input {
+  font-size: 16px;
   &:hover {
     box-shadow: 0 0px 8px $color-navyblue;
   }
@@ -200,12 +204,14 @@ input {
     $color-blue
   );
   background-size: 200% 200%;
+  cursor: pointer;
   margin: 0 0 0 48px;
   animation: gradient 8s ease infinite;
   padding: 20px 40px;
   color: $color-light;
   border: solid 1px black;
   font-size: 32px;
+  width: fit-content;
   position: relative;
   &:hover {
     text-decoration: none;
@@ -291,6 +297,7 @@ input {
     display: block;
     input {
       width: 80vw;
+      font-size: 10px;
     }
   }
 
@@ -298,6 +305,9 @@ input {
     font-size: 20px;
     padding: 4px 0 4px 8px;
     margin-bottom: 20px;
+    sup {
+      font-size: 10px;
+    }
   }
 
   .orderedItems,
@@ -403,6 +413,9 @@ input {
     font-size: 20px;
     padding: 4px 0 4px 8px;
     margin-bottom: 20px;
+    sup {
+      font-size: 10px;
+    }
   }
 
   .orderedItems,
@@ -508,6 +521,9 @@ input {
     font-size: 20px;
     padding: 4px 0 4px 8px;
     margin-bottom: 20px;
+    sup {
+      font-size: 10px;
+    }
   }
 
   .orderedItems,
@@ -606,6 +622,7 @@ input {
     display: block;
     input {
       width: 80vw;
+      font-size: 10px;
     }
   }
 
@@ -613,6 +630,9 @@ input {
     font-size: 20px;
     padding: 4px 0 4px 8px;
     margin-bottom: 20px;
+    sup {
+      font-size: 10px;
+    }
   }
 
   .orderedItems,
@@ -711,6 +731,7 @@ input {
     display: block;
     input {
       width: 80vw;
+      font-size: 10px;
     }
   }
 
@@ -718,6 +739,9 @@ input {
     font-size: 20px;
     padding: 4px 0 4px 8px;
     margin-bottom: 20px;
+    sup {
+      font-size: 10px;
+    }
   }
 
   .orderedItems,
@@ -816,6 +840,7 @@ input {
     display: block;
     input {
       width: 80vw;
+      font-size: 10px;
     }
   }
 
@@ -823,6 +848,9 @@ input {
     font-size: 20px;
     padding: 4px 0 4px 8px;
     margin-bottom: 20px;
+    sup {
+      font-size: 10px;
+    }
   }
 
   .orderedItems,

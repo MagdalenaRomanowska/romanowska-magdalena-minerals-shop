@@ -127,7 +127,36 @@ class Product extends React.Component {
             </li>
           </ul>
         </div>
-        <div className={styles.giftBoxesTitle}>Free gift box to every order!</div>
+        <div className={styles.giftBoxesTitle}>
+          F<span className={styles.letter}></span>
+          r<span className={styles.letter}></span>
+          e<span className={styles.letter}></span>
+          e<span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>
+          g<span className={styles.letter}></span>
+          i<span className={styles.letter}></span>
+          f<span className={styles.letter}></span>
+          t<span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>
+          b<span className={styles.letter}></span>
+          o<span className={styles.letter}></span>
+          x<span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>
+          t<span className={styles.letter}></span>
+          o<span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>
+          e<span className={styles.letter}></span>
+          v<span className={styles.letter}></span>
+          e<span className={styles.letter}></span>
+          r<span className={styles.letter}></span>
+          y<span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>
+          o<span className={styles.letter}></span>
+          r<span className={styles.letter}></span>
+          d<span className={styles.letter}></span>
+          e<span className={styles.letter}></span>
+          r<span className={styles.letter}></span>
+          !</div>
         <div className={styles.giftBoxes} key={product.titleProduct}>
           <div className={styles.giftBox01}><img src={product.photoGiftBox01} alt={'photoGiftBox01'}/></div>
           <div className={styles.giftBox02}><img src={product.photoGiftBox02} alt={'photoGiftBox02'}/></div>

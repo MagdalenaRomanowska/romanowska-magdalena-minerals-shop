@@ -4,6 +4,23 @@
   background-color: $color-lightblue;
 }
 
+.letter {
+  display: inline-flex;
+  height: 30px;
+  width: 4px;
+  animation: letter 3s ease-in-out infinite alternate;
+}
+@keyframes letter {
+  0%,
+  30% {
+    width: 0.5vw;
+  }
+  70%,
+  100% {
+    width: 1vw;
+  }
+}
+
 .giftBoxesTitle {
   font-size: 48px;
   color: $color-navyblue;
@@ -25,6 +42,8 @@
 
 .titleProduct {
   color: $color-navyblue;
+  text-transform: uppercase;
+  letter-spacing: 4px;
   font-size: 60px;
   margin: 60px 0 0 0;
   padding-bottom: 20px;
@@ -52,7 +71,7 @@
 }
 
 .textProduct {
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
   color: $color-navyblue;
   padding: 20px 0 0 0;
@@ -98,7 +117,7 @@
 }
 
 .selectQuantity {
-  font-size: 32px;
+  font-size: 24px;
   color: $color-navyblue;
   padding: 20px 0 60px 0;
   text-align: center;
@@ -106,7 +125,7 @@
 }
 
 .plusAndMinus {
-  font-size: 20px;
+  font-size: 16px;
   display: inline-flex;
   padding: 12px 0 0 0;
   margin-bottom: 12px;
@@ -129,7 +148,7 @@
 
 .totalPrice {
   margin: 0 0 16px 0;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .addToCartContainer {
@@ -146,7 +165,7 @@
   padding: 8px 12px;
   margin: 0 0 80px 0;
   border-radius: 3%;
-  font-size: 24px;
+  font-size: 16px;
   cursor: pointer;
   transition: box-shadow 0.2s ease-in-out;
   &:hover {

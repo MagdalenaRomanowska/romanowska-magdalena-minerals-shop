@@ -1,9 +1,13 @@
 @import "../../../styles/settings.scss";
 
 .sectionTitle {
-  color: $color-navyblue;
+  background-image: url("https://i.postimg.cc/26f6rqFk/fioletowe-jasniejsze-blue.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  color: $color-light;
   font-size: 60px;
-  padding: 60px 0 20px 0px;
+  padding: 120px 0;
   font-weight: bold;
   text-align: center;
   position: relative;
@@ -127,13 +131,13 @@
 }
 
 .photoInsideMaterial {
-  position: relative;
-  cursor: pointer;
+  position: relative;  
 
   &:hover .clickToExplore {
     opacity: 1;
     text-decoration: none;
     color: $color-light;
+    cursor: pointer;
   }
 
   img {
@@ -408,10 +412,10 @@
   }
 
   .sectionTitle {
-    color: $color-navyblue;
+    color: $color-light;
     text-align: center;
     font-size: 32px;
-    padding: 0;
+    padding: 40px 0;
   }
 
   .allProducts {
@@ -500,10 +504,10 @@
   }
 
   .sectionTitle {
-    color: $color-navyblue;
+    color: $color-light;
     text-align: center;
     font-size: 24px;
-    padding: 0;
+    padding: 40px 0;
   }
 
   .allProducts {

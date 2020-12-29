@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Wave.module.scss';
 
-const Component = ({ className, children }) => (
+const Component = () => (
   <div className={styles.root}>
     <div className={styles.ocean}>
       <div className={styles.wave}></div>
@@ -10,10 +9,5 @@ const Component = ({ className, children }) => (
     </div>
   </div>
 );
-
-Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-};
 
 export { Component as Wave, Component as WaveComponent };

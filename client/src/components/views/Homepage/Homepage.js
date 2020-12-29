@@ -18,7 +18,7 @@ const Homepage = ({ className }) => (
               <li>for every occasion</li>
               <li>timeless gems</li>
               <li>silver materials</li>
-              <li>elegance</li>
+              <li>elegant</li>
             </ul>
           </div>
         </h4>
