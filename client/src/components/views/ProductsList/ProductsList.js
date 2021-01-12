@@ -17,102 +17,11 @@ class ProductsList extends React.Component {
       <div className={styles.productDescription}>
         <div className={styles.squaresLeftSided}>
           <ul className={styles.squares}>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
+          {[...Array(32)].map((x, i) => (
+              <li key={i}>
+                <i className={"far fa-gem"}></i>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={styles.sectionTitle}>

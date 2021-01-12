@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Product.module.scss';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Product.module.scss";
+import { Link } from "react-router-dom";
 
 class Product extends React.Component {
   constructor(props) {
@@ -29,158 +29,77 @@ class Product extends React.Component {
       <div className={styles.productDescription}>
         <div className={styles.squaresLeftSided}>
           <ul className={styles.squares}>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
-            <li>
-              <i className={'far fa-gem'}></i>
-            </li>
+            {[...Array(32)].map((x, i) => (
+              <li key={i}>
+                <i className={"far fa-gem"}></i>
+              </li>
+            ))}
           </ul>
         </div>
         <div className={styles.giftBoxesTitle}>
-          F<span className={styles.letter}></span>
-          r<span className={styles.letter}></span>
-          e<span className={styles.letter}></span>
-          e<span className={styles.letter}></span>
-          &nbsp; <span className={styles.letter}></span>
-          g<span className={styles.letter}></span>
-          i<span className={styles.letter}></span>
-          f<span className={styles.letter}></span>
-          t<span className={styles.letter}></span>
-          &nbsp; <span className={styles.letter}></span>
-          b<span className={styles.letter}></span>
-          o<span className={styles.letter}></span>
-          x<span className={styles.letter}></span>
-          &nbsp; <span className={styles.letter}></span>
-          t<span className={styles.letter}></span>
-          o<span className={styles.letter}></span>
-          &nbsp; <span className={styles.letter}></span>
-          e<span className={styles.letter}></span>
-          v<span className={styles.letter}></span>
-          e<span className={styles.letter}></span>
-          r<span className={styles.letter}></span>
-          y<span className={styles.letter}></span>
-          &nbsp; <span className={styles.letter}></span>
-          o<span className={styles.letter}></span>
-          r<span className={styles.letter}></span>
-          d<span className={styles.letter}></span>
-          e<span className={styles.letter}></span>
-          r<span className={styles.letter}></span>
-          !</div>
+          F<span className={styles.letter}></span>r
+          <span className={styles.letter}></span>e
+          <span className={styles.letter}></span>e
+          <span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>g
+          <span className={styles.letter}></span>i
+          <span className={styles.letter}></span>f
+          <span className={styles.letter}></span>t
+          <span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>b
+          <span className={styles.letter}></span>o
+          <span className={styles.letter}></span>x
+          <span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>t
+          <span className={styles.letter}></span>o
+          <span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>e
+          <span className={styles.letter}></span>v
+          <span className={styles.letter}></span>e
+          <span className={styles.letter}></span>r
+          <span className={styles.letter}></span>y
+          <span className={styles.letter}></span>
+          &nbsp; <span className={styles.letter}></span>o
+          <span className={styles.letter}></span>r
+          <span className={styles.letter}></span>d
+          <span className={styles.letter}></span>e
+          <span className={styles.letter}></span>r
+          <span className={styles.letter}></span>!
+        </div>
         <div className={styles.giftBoxes} key={product.titleProduct}>
-          <div className={styles.giftBox01}><img src={product.photoGiftBox01} alt={'photoGiftBox01'}/></div>
-          <div className={styles.giftBox02}><img src={product.photoGiftBox02} alt={'photoGiftBox02'}/></div>
-          <div className={styles.giftBox03}><img src={product.photoGiftBox03} alt={'photoGiftBox03'}/></div>
-          <div className={styles.giftBox04}><img src={product.photoGiftBox04} alt={'photoGiftBox04'}/></div>
-          <div className={styles.giftBox05}><img src={product.photoGiftBox05} alt={'photoGiftBox05'}/></div>
+          <div className={styles.giftBox01}>
+            <img src={product.photoGiftBox01} alt={"photoGiftBox01"} />
+          </div>
+          <div className={styles.giftBox02}>
+            <img src={product.photoGiftBox02} alt={"photoGiftBox02"} />
+          </div>
+          <div className={styles.giftBox03}>
+            <img src={product.photoGiftBox03} alt={"photoGiftBox03"} />
+          </div>
+          <div className={styles.giftBox04}>
+            <img src={product.photoGiftBox04} alt={"photoGiftBox04"} />
+          </div>
+          <div className={styles.giftBox05}>
+            <img src={product.photoGiftBox05} alt={"photoGiftBox05"} />
+          </div>
         </div>
         <div className={styles.titleProduct}>{product.titleProduct}</div>
         <div className={styles.textProduct}>{product.textProduct}</div>
         <div className={styles.productDetailPhotos} key={product.titleProduct}>
           <img
             src={product.photoProductDetail01}
-            alt={'photoProductDetail01'}
-            className={'col-lg-4'}
+            alt={"photoProductDetail01"}
+            className={"col-lg-4"}
           />
           <img
             src={product.photoProductDetail02}
-            alt={'photoProductDetail02'}
-            className={'col-lg-4'}
+            alt={"photoProductDetail02"}
+            className={"col-lg-4"}
           />
           <img
             src={product.photoProductDetail03}
-            alt={'photoProductDetail03'}
-            className={'col-lg-4'}
+            alt={"photoProductDetail03"}
+            className={"col-lg-4"}
           />
         </div>
         <div className={styles.textProduct}>
@@ -218,7 +137,7 @@ class Product extends React.Component {
               Add to cart
             </div>
           </div>
-          <Link to={'/basket'} className={styles.goToBasket}>
+          <Link to={"/basket"} className={styles.goToBasket}>
             Go &nbsp;to &nbsp;basket
           </Link>
         </div>

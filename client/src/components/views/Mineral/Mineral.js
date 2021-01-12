@@ -7,16 +7,11 @@ const Mineral = ({ mineral }) => (
   <div className={styles.main}>
     <div className={styles.background}>
       <ul className={styles.squares}>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
-        <li><i className={'far fa-gem'}></i></li>
+      {[...Array(10)].map((x, i) => (
+              <li key={i}>
+                <i className={"far fa-gem"}></i>
+              </li>
+            ))}
       </ul>
       <div className={styles.postContent}>
         <div className={styles.detailTitle}><i className={'far fa-gem'}></i> &nbsp; {mineral ? mineral.title : ''}  &nbsp; <i className={'far fa-gem'}></i></div>
